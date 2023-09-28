@@ -1,0 +1,200 @@
+/* Reset default styles */
+html, body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace;
+    background-color: #EBF5EE;
+    color: #283044;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav.navbar {
+    background-color: #8B786D;
+    color: #BFA89E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav.navbar .logo a {
+    text-decoration: none;
+    color: #DED3CE;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav.navbar .nav-list {
+    list-style: none;
+    display: flex;
+}
+
+nav.navbar .nav-list li {
+    margin-right: 20px;
+}
+
+nav.navbar .nav-list a {
+    text-decoration: none;
+    color: #DED3CE;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #B6BBB4;
+    align-items: center;
+}
+
+.about-image {
+    max-width: 20%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the image horizontally */
+    text-align: center; /* Center the image within its container */
+    padding: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-text {
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically within its container */
+}
+
+
+.title {
+    font-weight: bold;
+    line-height: 1.5 ;
+    margin: 0 auto; /* Center the image horizontally */
+    text-align: center; /* Center the image within its container */
+    padding: 5px;
+    font-size: 23px;
+}
+
+h1.hw {
+    font-weight: bold;
+    line-height: 1.5 ;
+    margin: 0 auto; 
+    text-align: center; 
+    font-size: 23px;
+    animation: glow 1.5s infinite alternate;
+}
+
+.aboutinfo {
+    line-height: 1.5;
+}
+
+footer.footer {
+    text-align: center;
+    background-color: #2E2724;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.8rem;
+}
+
+html, body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: monospace;
+    background-color: #EBF5EE;
+    color: #283044;
+  }
+  
+  h1.index-title {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    color: #2E2724;
+    animation: bounce 3s infinite;
+  }
+  /*Used ChatGBT to Figure out how to add an animation!*/
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+ 
+  .project img {
+    max-width: 80%; /* Adjust the width as needed */
+    text-align: center; /* Center the image within its container */
+    padding: 20px;
+}
+.portfolio{
+    font-size: 30px;
+    text-align: center; /* Center the image within its container */
+    padding: 20px;
+}
+
+h1.blogtitle{
+    font-size: 40px;
+    text-align: center; /* Center the image within its container */
+    padding: 20px;
+
+}
+div.resume
+{
+    line-height: 2;
+}
+div.education {
+    text-align: center;
+}
+div.experience {
+    margin-left: 75px;
+    padding: 10px;
+}
+div.projects {
+    margin-left: 75px;
+    padding: 10px;
+}
+ul.skill-list{
+    margin-left: 75px;
+    padding: 10px;
+}
+ul.course-list{
+    margin-left: 75px;
+    padding: 10px;
+}
+
+h1.Resume{
+    text-align: center;
+
+}
+div.top-resume{
+    text-align: center;
+   
+}
+
+h1.blog{
+    text-align: center;
+    padding: 20px;
+    color: #2E2724;
+}
+ div.blog{
+    line-height: 1.5;
+ }
+
+main.contactinfo{
+    text-align: center;
+    line-height: 40px;
+}
