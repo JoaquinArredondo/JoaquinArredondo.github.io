@@ -2951,4 +2951,10 @@
     transition-duration: 0.01ms !important;
   }
 }
-
+.anu-media-image{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
+}
