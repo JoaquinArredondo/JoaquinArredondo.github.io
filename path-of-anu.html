@@ -112,22 +112,11 @@
                          Recommended image: your strongest cinematic environment screenshot.
                          Recommended ratio: portrait 4:5 or square 1:1.
                     -->
-            <div
-              class="anu-placeholder anu-placeholder--hero"
-              role="img"
-              aria-label="Placeholder for a cinematic Path of Anu environment screenshot"
-            >
-              <span class="anu-placeholder-number">IMAGE 01</span>
-              <div>
-                <strong>Replace with your strongest hero screenshot</strong>
-                <p>
-                  Suggested: celestial sky, ruins, spell VFX, or a wide view of
-                  the world.
-                </p>
-                <code>images/path-of-anu/anu-hero.jpg</code>
-              </div>
-            </div>
-
+                <img
+                    src="images/path-of-anu/gameplay.png"
+                    alt="Restoration Quest"
+                    class="anu-media-image"
+                />
             <div class="anu-hero-rune anu-hero-rune-one" aria-hidden="true">
               ♍
             </div>
@@ -839,30 +828,11 @@
             </article>
           </div>
 
-          <div class="anu-architecture-grid">
-            <!-- IMAGE PLACEHOLDER 06
-                         Replace with a clean export of the spell architecture diagram.
-                         You can recreate the hand-drawn diagram from page 3 of the report,
-                         or use a screenshot if it remains readable.
-                    -->
-            <div
-              class="anu-placeholder anu-placeholder--diagram"
-              role="img"
-              aria-label="Placeholder for the Path of Anu spell system architecture diagram"
-            >
-              <span class="anu-placeholder-number">DIAGRAM 01</span>
-              <div>
-                <strong
-                  >Replace with the spell-system architecture diagram</strong
-                >
-                <p>
-                  Show WandManager, SpellDrawer, SpellRecognizer, Processor,
-                  Recognizer, and SpellCaster.
-                </p>
-                <code>images/path-of-anu/spell-architecture.png</code>
-              </div>
-            </div>
-
+           <img
+        src="images/path-of-anu/spellmanager.png"
+        alt="Redemption Quest"
+        class="anu-media-image"
+        />
             <div class="anu-architecture-notes">
               <article>
                 <span>STATE MANAGEMENT</span>
@@ -899,189 +869,216 @@
       <!-- =====================================================
              TECHNICAL ART PIPELINE
              ===================================================== -->
-      <section class="anu-section" aria-labelledby="tech-art-title">
-        <div class="anu-shell">
-          <div class="anu-section-heading anu-section-heading--split">
-            <div>
-              <p class="section-number">07 / TECHNICAL ART</p>
-              <h2 id="tech-art-title">
-                Procedural tools with an artist-facing purpose.
-              </h2>
-            </div>
+      <!-- =====================================================
+     TECHNICAL ART PIPELINE
+===================================================== -->
+<section class="anu-section" aria-labelledby="tech-art-title">
+  <div class="anu-shell">
 
-            <p class="anu-heading-summary">
-              I used Path of Anu to investigate how Houdini Digital Assets could
-              help a small team create and revise environment content without
-              rebuilding every prop by hand. This exploration later expanded
-              into my senior project on procedural level-design tools for Unity.
-            </p>
-          </div>
+    <div class="anu-section-heading anu-section-heading--split">
+      <div>
+        <p class="section-number">07 / TECHNICAL ART</p>
 
-          <div
-            class="anu-hda-pipeline"
-            aria-label="Houdini Digital Asset pipeline"
+        <h2 id="tech-art-title">
+          Building reusable tools for artists, not just assets.
+        </h2>
+      </div>
+
+      <p class="anu-heading-summary">
+        One of my primary responsibilities on Path of Anu was developing
+        procedural Houdini Digital Assets (HDAs) that accelerated level design
+        and reduced repetitive environment creation. Rather than modeling every
+        asset individually, these tools exposed artist-friendly controls that
+        generated unique variations directly inside Unity through Houdini
+        Engine.
+      </p>
+    </div>
+
+
+    <!-- Pipeline -->
+    <div class="anu-hda-pipeline">
+
+      <article>
+        <span>HOUDINI</span>
+
+        <strong>Create the procedural system</strong>
+
+        <p>
+          Develop reusable node networks that generate geometry through
+          parameters instead of destructive modeling.
+        </p>
+      </article>
+
+      <div>→</div>
+
+      <article>
+        <span>HDA</span>
+
+        <strong>Expose artist controls</strong>
+
+        <p>
+          Package the node network into a reusable digital asset with intuitive
+          sliders and controls.
+        </p>
+      </article>
+
+      <div>→</div>
+
+      <article>
+        <span>UNITY</span>
+
+        <strong>Rapid iteration</strong>
+
+        <p>
+          Generate variations directly inside Unity using Houdini Engine,
+          allowing level designers to iterate without rebuilding assets.
+        </p>
+      </article>
+
+    </div>
+
+
+    <!-- HDA Cards -->
+    <div class="anu-hda-grid">
+
+
+      <!-- ROCK -->
+      <article class="anu-hda-card">
+
+        <div class="anu-tool-media anu-tool-media--single">
+
+          <img
+            src="images/path-of-anu/rockhda.png"
+            alt="Procedural Rock Generator Houdini Digital Asset"
           >
-            <article>
-              <span>HOUDINI</span>
-              <strong>Build the procedural network</strong>
-              <p>
-                Create geometry, variation, scattering, and attribute logic with
-                reusable nodes.
-              </p>
-            </article>
 
-            <div aria-hidden="true">→</div>
-
-            <article>
-              <span>HDA</span>
-              <strong>Expose useful controls</strong>
-              <p>
-                Package the network as an artist-friendly tool with adjustable
-                parameters.
-              </p>
-            </article>
-
-            <div aria-hidden="true">→</div>
-
-            <article>
-              <span>UNITY</span>
-              <strong>Iterate inside the level</strong>
-              <p>
-                Use Houdini Engine to create variations directly in the game
-                editor.
-              </p>
-            </article>
-          </div>
-
-          <div class="anu-hda-grid">
-            <article class="anu-hda-card">
-              <!-- IMAGE PLACEHOLDER 07 -->
-              <div
-                class="anu-placeholder anu-placeholder--tool"
-                role="img"
-                aria-label="Placeholder for the procedural rock Houdini Digital Asset"
-              >
-                <span class="anu-placeholder-number">IMAGE 07</span>
-                <div>
-                  <strong>Rock HDA</strong>
-                  <p>Use a split image: Houdini node graph + Unity result.</p>
-                </div>
-              </div>
-
-              <div class="anu-hda-card-copy">
-                <span>PROCEDURAL ENVIRONMENT TOOL</span>
-                <h3>Rock Generator</h3>
-                <p>
-                  Produced stylized rock variations through parameter-driven
-                  shape, noise, scale, and seed controls for repeated use across
-                  the world.
-                </p>
-              </div>
-            </article>
-
-            <article class="anu-hda-card">
-              <!-- IMAGE PLACEHOLDER 08 -->
-              <div
-                class="anu-placeholder anu-placeholder--tool"
-                role="img"
-                aria-label="Placeholder for the procedural tree Houdini Digital Asset"
-              >
-                <span class="anu-placeholder-number">IMAGE 08</span>
-                <div>
-                  <strong>Tree HDA</strong>
-                  <p>
-                    Use a split image: exposed parameters + final tree
-                    variation.
-                  </p>
-                </div>
-              </div>
-
-              <div class="anu-hda-card-copy">
-                <span>PROCEDURAL FOLIAGE TOOL</span>
-                <h3>Tree Generator</h3>
-                <p>
-                  Explored reusable trunks, branches, foliage placement, and
-                  variation controls to support fantasy environment composition.
-                </p>
-              </div>
-            </article>
-
-            <article class="anu-hda-card">
-              <!-- IMAGE PLACEHOLDER 09 -->
-              <div
-                class="anu-placeholder anu-placeholder--tool"
-                role="img"
-                aria-label="Placeholder for the procedural ivy Houdini Digital Asset"
-              >
-                <span class="anu-placeholder-number">IMAGE 09</span>
-                <div>
-                  <strong>Ivy HDA</strong>
-                  <p>
-                    Use a split image: curve or node network + foliage in Unity.
-                  </p>
-                </div>
-              </div>
-
-              <div class="anu-hda-card-copy">
-                <span>PROCEDURAL FOLIAGE TOOL</span>
-                <h3>Ivy Generator</h3>
-                <p>
-                  Generated vine-like growth and instanced leaves to quickly add
-                  organic detail and visual storytelling to environmental
-                  surfaces.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="anu-vfx-feature">
-            <div class="anu-vfx-copy">
-              <p class="anu-card-label">SPELL VFX & VISUAL FEEDBACK</p>
-              <h3>Six spell effects, one consistent magical language.</h3>
-              <p>
-                I created projectile, impact, interaction, and wand visuals with
-                Unity particle systems, Shader Graph, and VFX Graph. The effects
-                had to communicate spell identity, travel direction, successful
-                hits, and environmental change without overwhelming the player's
-                view in VR.
-              </p>
-
-              <ul class="anu-check-list">
-                <li>
-                  Distinct silhouettes and color families for spell readability
-                </li>
-                <li>Wand trails that made three-dimensional drawing visible</li>
-                <li>
-                  Impact effects that confirmed successful puzzle interactions
-                </li>
-                <li>
-                  Environmental VFX that gave each completed ritual a sense of
-                  weight
-                </li>
-              </ul>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER 10
-                         Replace with a 2x2 spell VFX montage or a strong spell projectile shot.
-                    -->
-            <div
-              class="anu-placeholder anu-placeholder--landscape"
-              role="img"
-              aria-label="Placeholder for a montage of Path of Anu spell visual effects"
-            >
-              <span class="anu-placeholder-number">IMAGE 10</span>
-              <div>
-                <strong>Replace with a spell VFX montage</strong>
-                <p>
-                  Suggested: wand trail, projectile, impact, and environmental
-                  response.
-                </p>
-                <code>images/path-of-anu/spell-vfx-grid.jpg</code>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+
+        <div class="anu-hda-card-copy">
+
+          <span>PROCEDURAL ENVIRONMENT TOOL</span>
+
+          <h3>Rock Generator</h3>
+
+          <p>
+            Created a procedural rock generator capable of producing numerous
+            stylized rock variations using adjustable parameters for shape,
+            scale, noise, and randomness. The tool enabled rapid environment
+            dressing while maintaining a cohesive artistic style throughout the
+            world.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- TREE -->
+      <article class="anu-hda-card">
+
+        <div class="anu-tool-media anu-tool-media--single">
+
+          <img
+            src="images/path-of-anu/treehda.png"
+            alt="Procedural Tree Generator Houdini Digital Asset"
+          >
+
+        </div>
+
+        <div class="anu-hda-card-copy">
+
+          <span>PROCEDURAL FOLIAGE TOOL</span>
+
+          <h3>Tree Generator</h3>
+
+          <p>
+            Developed a procedural tree generator capable of creating stylized
+            fantasy trees with adjustable trunk, branch, and foliage
+            parameters. The system allowed multiple visual variations while
+            preserving a consistent artistic direction across the environment.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- IVY -->
+      <article class="anu-hda-card">
+
+        <div class="anu-tool-media anu-tool-media--single">
+
+          <img
+            src="images/path-of-anu/ivytoolhda.png"
+            alt="Procedural Ivy Generator Houdini Digital Asset"
+          >
+
+        </div>
+
+        <div class="anu-hda-card-copy">
+
+          <span>PROCEDURAL FOLIAGE TOOL</span>
+
+          <h3>Ivy Generator</h3>
+
+          <p>
+            Built an ivy generation tool using procedural growth techniques,
+            allowing organic vines and foliage to quickly populate structures,
+            ruins, and environmental surfaces. The tool significantly reduced
+            repetitive placement while improving environmental storytelling.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- Spell VFX -->
+    <div class="anu-vfx-feature">
+
+      <div class="anu-vfx-copy">
+
+        <p class="anu-card-label">
+          SPELL VFX & VISUAL FEEDBACK
+        </p>
+
+        <h3>
+          Six spells. One visual language.
+        </h3>
+
+        <p>
+          Alongside procedural world-building, I created spell projectiles,
+          interaction effects, environmental VFX, and wand visuals using Unity's
+          Particle System, Shader Graph, and VFX Graph. Each spell required a
+          unique visual identity while remaining cohesive within the world.
+        </p>
+
+        <ul class="anu-check-list">
+
+          <li>Distinct projectile silhouettes and color palettes</li>
+
+          <li>Wand trails visualizing gesture-based spell drawing</li>
+
+          <li>Impact effects confirming successful puzzle interactions</li>
+
+          <li>Environmental VFX reinforcing ritual completion</li>
+
+        </ul>
+
+      </div>
+
+      <img
+        src="images/path-of-anu/spellgrid.png"
+        alt="Spell VFX showcase"
+        class="anu-media-image"
+      >
+
+    </div>
+
+  </div>
+</section>
 
       <!-- =====================================================
              AUDIO
