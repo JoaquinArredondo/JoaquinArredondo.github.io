@@ -1,0 +1,1573 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Path of Anu is a Meta Quest 3 VR spellcasting puzzle experience created by Joaquin Arredondo and a three-person Cal Poly capstone team."
+    />
+
+    <title>Path of Anu | Joaquin Arredondo</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="home-page anu-page">
+    <a class="anu-skip-link" href="#main-content">Skip to project content</a>
+
+    <!-- =====================================================
+         SITE NAVIGATION
+         Reuses the same classes as the homepage.
+         ===================================================== -->
+    <header class="site-header anu-site-header">
+      <nav class="home-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Joaquin Arredondo home">
+          JA<span>.</span>
+        </a>
+
+        <ul class="home-nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li>
+            <a class="anu-nav-current" href="path-of-anu.html">Path of Anu</a>
+          </li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="anu-main" id="main-content">
+      <!-- =====================================================
+             HERO
+             ===================================================== -->
+      <section class="anu-hero" aria-labelledby="anu-title">
+        <div class="anu-star-field" aria-hidden="true"></div>
+        <div class="anu-orbit anu-orbit-one" aria-hidden="true"></div>
+        <div class="anu-orbit anu-orbit-two" aria-hidden="true"></div>
+
+        <div class="anu-shell anu-hero-grid">
+          <div class="anu-hero-copy">
+            <a class="anu-back-link" href="portfolio.html">
+              <span aria-hidden="true">←</span>
+              All projects
+            </a>
+
+            <p class="eyebrow">VR SPELLCASTING · TECHNICAL ART · GAME DESIGN</p>
+
+            <h1 id="anu-title">
+              Path of
+              <span>Anu</span>
+            </h1>
+
+            <p class="anu-hero-kicker">
+              Restore a fractured world by drawing magic directly into it.
+            </p>
+
+            <p class="anu-hero-description">
+              A Meta Quest 3 puzzle experience where players draw magical sigils
+              in real time, unlock celestial spells, transform the environment,
+              and reactivate ancient seals inspired by Babylonian mythology.
+            </p>
+
+            <div class="anu-hero-actions">
+              <a class="button button-primary" href="#gameplay-video">
+                <span class="anu-play-icon" aria-hidden="true">▶</span>
+                Watch Gameplay
+              </a>
+
+              <a
+                class="button button-secondary"
+                href="https://youtu.be/PUcehc885bM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open on YouTube
+              </a>
+            </div>
+
+            <ul class="anu-tech-list" aria-label="Project technologies">
+              <li>Unity</li>
+              <li>C#</li>
+              <li>Meta XR</li>
+              <li>Houdini</li>
+              <li>VFX Graph</li>
+              <li>Shader Graph</li>
+              <li>Meta Quest 3</li>
+            </ul>
+          </div>
+
+          <div class="anu-hero-visual">
+            <!-- IMAGE PLACEHOLDER 01
+                         Replace the entire .anu-placeholder div below with:
+
+                         <img
+                             class="anu-media-image anu-media-image--hero"
+                             src="images/path-of-anu/anu-hero.jpg"
+                             alt="Path of Anu magical environment under a celestial night sky"
+                         >
+
+                         Recommended image: your strongest cinematic environment screenshot.
+                         Recommended ratio: portrait 4:5 or square 1:1.
+                    -->
+            <div
+              class="anu-placeholder anu-placeholder--hero"
+              role="img"
+              aria-label="Placeholder for a cinematic Path of Anu environment screenshot"
+            >
+              <span class="anu-placeholder-number">IMAGE 01</span>
+              <div>
+                <strong>Replace with your strongest hero screenshot</strong>
+                <p>
+                  Suggested: celestial sky, ruins, spell VFX, or a wide view of
+                  the world.
+                </p>
+                <code>images/path-of-anu/anu-hero.jpg</code>
+              </div>
+            </div>
+
+            <div class="anu-hero-rune anu-hero-rune-one" aria-hidden="true">
+              ♍
+            </div>
+            <div class="anu-hero-rune anu-hero-rune-two" aria-hidden="true">
+              ♌
+            </div>
+            <div class="anu-hero-rune anu-hero-rune-three" aria-hidden="true">
+              ♓
+            </div>
+
+            <div class="anu-hero-badge">
+              <span>Built for</span>
+              <strong>Meta Quest 3</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="anu-shell anu-project-facts" aria-label="Project facts">
+          <article>
+            <span>My Role</span>
+            <strong
+              >Technical Artist<br />Game Designer<br />Unity Developer</strong
+            >
+          </article>
+
+          <article>
+            <span>Team</span>
+            <strong>3-person<br />capstone team</strong>
+          </article>
+
+          <article>
+            <span>Development</span>
+            <strong>10-week<br />production cycle</strong>
+          </article>
+
+          <article>
+            <span>Focus</span>
+            <strong>VR interaction<br />and world transformation</strong>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             PROJECT SUMMARY
+             ===================================================== -->
+      <section
+        class="anu-section anu-section--overview"
+        aria-labelledby="overview-title"
+      >
+        <div class="anu-shell">
+          <div class="anu-section-heading">
+            <p class="section-number">01 / PROJECT OVERVIEW</p>
+            <h2 id="overview-title">
+              What if spellcasting was not just an input—but the entire
+              experience?
+            </h2>
+          </div>
+
+          <div class="anu-overview-grid">
+            <div class="anu-overview-lead">
+              <p>
+                <strong>Path of Anu</strong> is a VR puzzle game in which
+                players physically draw sigils with Meta Quest controllers to
+                cast magic. Each successful spell changes the world: ruins
+                awaken, foliage returns, lanterns ignite, corrupted statues are
+                cleansed, and celestial beacons reconnect a broken
+                constellation.
+              </p>
+
+              <p>
+                The project combined gameplay programming, technical art,
+                procedural content creation, environmental storytelling, sound,
+                and repeated user testing into a complete three-quest
+                experience.
+              </p>
+            </div>
+
+            <div class="anu-stat-grid">
+              <article>
+                <strong>3</strong>
+                <span>Complete quests</span>
+              </article>
+
+              <article>
+                <strong>8</strong>
+                <span>Total spells</span>
+              </article>
+
+              <article>
+                <strong>50+</strong>
+                <span>Playtests</span>
+              </article>
+
+              <article>
+                <strong>10</strong>
+                <span>Weeks of iteration</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="anu-case-study-grid">
+            <article class="anu-case-card">
+              <span class="anu-case-index">01</span>
+              <p class="anu-card-label">THE PROBLEM</p>
+              <h3>Make VR magic feel physical, readable, and necessary.</h3>
+              <p>
+                Many spell systems reduce magic to a button press or use
+                gestures only as decoration. Our challenge was to make drawing,
+                recognizing, and applying a spell the central source of
+                discovery and progression.
+              </p>
+            </article>
+
+            <article class="anu-case-card">
+              <span class="anu-case-index">02</span>
+              <p class="anu-card-label">THE SOLUTION</p>
+              <h3>Tie every spell to a visible transformation in the world.</h3>
+              <p>
+                Base elemental magic unlocks stronger zodiac spells. Those
+                spells restore nature, illuminate ritual spaces, cleanse
+                corruption, and activate celestial seals so the player's
+                progress is always tangible.
+              </p>
+            </article>
+
+            <article class="anu-case-card">
+              <span class="anu-case-index">03</span>
+              <p class="anu-card-label">THE IMPLEMENTATION</p>
+              <h3>
+                Connect gesture recognition, quest state, VFX, audio, and XR
+                feedback.
+              </h3>
+              <p>
+                The experience used Unity, C#, Meta XR tooling,
+                ScriptableObjects, quest managers, particle systems, Shader
+                Graph, VFX Graph, Houdini Digital Assets, sound design, and
+                iterative headset testing.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             GAMEPLAY VIDEO
+             ===================================================== -->
+      <section
+        class="anu-section anu-video-section"
+        id="gameplay-video"
+        aria-labelledby="video-title"
+      >
+        <div class="anu-shell">
+          <div class="anu-video-heading">
+            <div>
+              <p class="section-number">02 / GAMEPLAY</p>
+              <h2 id="video-title">See the magic in motion.</h2>
+            </div>
+
+            <p>
+              The video demonstrates sigil drawing, spell casting, environmental
+              interactions, quest progression, and the visual direction of the
+              completed capstone build.
+            </p>
+          </div>
+
+          <div class="anu-video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/PUcehc885bM"
+              title="Path of Anu gameplay showcase"
+              loading="eager"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+
+            <noscript>
+              <p>
+                JavaScript is required to display the embedded video.
+                <a
+                  href="https://youtu.be/PUcehc885bM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch Path of Anu on YouTube.
+                </a>
+              </p>
+            </noscript>
+          </div>
+
+          <div class="anu-video-caption">
+            <span>Gameplay showcase</span>
+            <p>Path of Anu · Meta Quest 3 · Unity</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             NARRATIVE AND DESIGN VISION
+             ===================================================== -->
+      <section class="anu-section" aria-labelledby="vision-title">
+        <div class="anu-shell">
+          <div class="anu-section-heading anu-section-heading--split">
+            <div>
+              <p class="section-number">03 / DESIGN VISION</p>
+              <h2 id="vision-title">
+                A celestial world built around restoration.
+              </h2>
+            </div>
+
+            <p class="anu-heading-summary">
+              I authored the original narrative, lore, game design document,
+              quest concepts, and much of the project's aesthetic direction.
+              Although the complete story could not be integrated within the
+              production schedule, it established the purpose and emotional
+              structure of the experience.
+            </p>
+          </div>
+
+          <div class="anu-story-grid">
+            <div class="anu-story-copy">
+              <p class="anu-story-lead">
+                You are the final Zodiac Celestial. Your call to action is to
+                restore balance by reactivating the seals and recovering
+                knowledge that has disappeared from the world.
+              </p>
+
+              <p>
+                In the project's Babylonian-inspired mythology, Tiamat is the
+                primordial goddess of chaos whose separation gives rise to
+                order: the heavens, the earth, and the beasts of the realm. Anu,
+                god of the heavens, divides the sky into northern and southern
+                regions and the equatorial celestial band known as the Path of
+                Anu—the zodiac.
+              </p>
+
+              <p>
+                The original narrative envisioned the player traveling along the
+                Draco celestial trail, restoring each zodiac seal, uncovering
+                the emotional essence of the signs, and ultimately confronting
+                Tiamat. The completed capstone narrowed that scope to three
+                polished rituals so the team could prioritize interaction
+                quality, visuals, and a complete playable arc.
+              </p>
+
+              <blockquote>
+                “The player does not conquer the world through magic. They
+                repair it.”
+              </blockquote>
+            </div>
+
+            <!-- IMAGE PLACEHOLDER 02
+                         Replace with a moodboard, narrative concept sheet, map, constellation,
+                         or environment concept image. Recommended ratio: 4:3.
+                    -->
+            <figure class="anu-image">
+
+    <img
+        class="anu-media-image"
+        src="images/path-of-anu/pathofanuquest1.gif"
+        alt="Path of Anu world building artwork"
+    >
+
+
+</figure>
+
+          <div
+            class="anu-player-journey"
+            aria-label="Path of Anu player journey"
+          >
+            <div class="anu-journey-step">
+              <span>01</span>
+              <strong>Awaken</strong>
+              <p>Enter a world whose celestial knowledge has been lost.</p>
+            </div>
+
+            <div class="anu-journey-arrow" aria-hidden="true">→</div>
+
+            <div class="anu-journey-step">
+              <span>02</span>
+              <strong>Learn</strong>
+              <p>
+                Use base elemental spells to understand the world's rituals.
+              </p>
+            </div>
+
+            <div class="anu-journey-arrow" aria-hidden="true">→</div>
+
+            <div class="anu-journey-step">
+              <span>03</span>
+              <strong>Transform</strong>
+              <p>
+                Unlock zodiac powers that visibly heal and illuminate the
+                environment.
+              </p>
+            </div>
+
+            <div class="anu-journey-arrow" aria-hidden="true">→</div>
+
+            <div class="anu-journey-step">
+              <span>04</span>
+              <strong>Restore</strong>
+              <p>Activate the beacons and reconnect the Path of Anu.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             QUEST DESIGN
+             ===================================================== -->
+      <section
+        class="anu-section anu-section--quests"
+        aria-labelledby="quests-title"
+      >
+        <div class="anu-shell">
+          <div class="anu-section-heading">
+            <p class="section-number">04 / QUEST DESIGN</p>
+            <h2 id="quests-title">
+              Three rituals. Three forms of transformation.
+            </h2>
+          </div>
+
+          <div class="anu-quest-stack">
+            <!-- QUEST 1 -->
+            <article class="anu-quest anu-quest--restoration">
+              <div class="anu-quest-media">
+                <!-- IMAGE PLACEHOLDER 03
+                                 Replace with a screenshot showing the Restoration quest,
+                                 preferably before/after foliage or the Virgo spell.
+                            -->
+                <div
+                  class="anu-placeholder anu-placeholder--quest"
+                  role="img"
+                  aria-label="Placeholder for the Restoration quest screenshot"
+                >
+                  <span class="anu-placeholder-number">IMAGE 03</span>
+                  <div>
+                    <strong>Restoration quest screenshot</strong>
+                    <p>
+                      Best option: before-and-after foliage growth or Virgo
+                      impact VFX.
+                    </p>
+                    <code>images/path-of-anu/quest-restoration.jpg</code>
+                  </div>
+                </div>
+              </div>
+
+              <div class="anu-quest-copy">
+                <div class="anu-quest-topline">
+                  <span>QUEST 01</span>
+                  <span>EARTH · WATER · VIRGO</span>
+                </div>
+
+                <h3>Restoration</h3>
+                <p class="anu-quest-tagline">
+                  Bring life back to forgotten ruins.
+                </p>
+
+                <ol class="anu-quest-steps">
+                  <li>
+                    <span>01</span>
+                    <p>
+                      Strike each ancient ruin three times with Earth and Water
+                      magic to awaken it.
+                    </p>
+                  </li>
+                  <li>
+                    <span>02</span>
+                    <p>
+                      Complete the elemental ritual to unlock the Virgo zodiac
+                      spell.
+                    </p>
+                  </li>
+                  <li>
+                    <span>03</span>
+                    <p>
+                      Cast Virgo three times at each restoration site to regrow
+                      the lost foliage.
+                    </p>
+                  </li>
+                  <li>
+                    <span>04</span>
+                    <p>
+                      Restore every site and activate the first celestial
+                      beacon.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </article>
+
+            <!-- QUEST 2 -->
+            <article class="anu-quest anu-quest--illumination">
+              <div class="anu-quest-media">
+                <!-- IMAGE PLACEHOLDER 04
+                                 Replace with a night screenshot showing lanterns, fire chambers,
+                                 or the Leo spell. Recommended ratio: 16:10.
+                            -->
+                <div
+                  class="anu-placeholder anu-placeholder--quest"
+                  role="img"
+                  aria-label="Placeholder for the Illumination quest screenshot"
+                >
+                  <span class="anu-placeholder-number">IMAGE 04</span>
+                  <div>
+                    <strong>Illumination quest screenshot</strong>
+                    <p>
+                      Best option: Leo projectile, lanterns, or a fully lit fire
+                      chamber.
+                    </p>
+                    <code>images/path-of-anu/quest-illumination.jpg</code>
+                  </div>
+                </div>
+              </div>
+
+              <div class="anu-quest-copy">
+                <div class="anu-quest-topline">
+                  <span>QUEST 02</span>
+                  <span>FIRE · LEO</span>
+                </div>
+
+                <h3>Illumination</h3>
+                <p class="anu-quest-tagline">
+                  Return light to an abandoned ritual ground.
+                </p>
+
+                <ol class="anu-quest-steps">
+                  <li>
+                    <span>01</span>
+                    <p>
+                      Use the Fire spell to ignite the lanterns throughout the
+                      level.
+                    </p>
+                  </li>
+                  <li>
+                    <span>02</span>
+                    <p>
+                      Lighting the full sequence unlocks the stronger Leo zodiac
+                      spell.
+                    </p>
+                  </li>
+                  <li>
+                    <span>03</span>
+                    <p>
+                      Charge each of the five fire chambers with five Leo casts.
+                    </p>
+                  </li>
+                  <li>
+                    <span>04</span>
+                    <p>
+                      Complete all chambers and ignite the second celestial
+                      beacon.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </article>
+
+            <!-- QUEST 3 -->
+            <article class="anu-quest anu-quest--redemption">
+              <div class="anu-quest-media">
+                <!-- IMAGE PLACEHOLDER 05
+                                 Replace with the strongest dragon shrine, water bowl, wind chime,
+                                 Pisces, or Aquarius screenshot. Recommended ratio: 16:10.
+                            -->
+                <div
+                  class="anu-placeholder anu-placeholder--quest"
+                  role="img"
+                  aria-label="Placeholder for the Redemption quest screenshot"
+                >
+                  <span class="anu-placeholder-number">IMAGE 05</span>
+                  <div>
+                    <strong>Redemption quest screenshot</strong>
+                    <p>
+                      Best option: spirit-bending a dragon statue or the final
+                      beacon.
+                    </p>
+                    <code>images/path-of-anu/quest-redemption.jpg</code>
+                  </div>
+                </div>
+              </div>
+
+              <div class="anu-quest-copy">
+                <div class="anu-quest-topline">
+                  <span>QUEST 03</span>
+                  <span>WATER · AIR · PISCES · AQUARIUS</span>
+                </div>
+
+                <h3>Redemption</h3>
+                <p class="anu-quest-tagline">
+                  Cleanse corrupted spirits and complete the final ritual.
+                </p>
+
+                <!-- COPY NOTE:
+                                 Your notes and the final report describe the exact Aquarius/wind
+                                 interaction slightly differently. This wording stays accurate to
+                                 both: base water/air objectives unlock the zodiac spells, which
+                                 then complete the dragon and air rituals. Adjust after comparing
+                                 the copy with your final gameplay footage.
+                            -->
+                <ol class="anu-quest-steps">
+                  <li>
+                    <span>01</span>
+                    <p>
+                      Activate the water bowls and wind instruments with
+                      elemental magic.
+                    </p>
+                  </li>
+                  <li>
+                    <span>02</span>
+                    <p>
+                      Complete both elemental paths to unlock Pisces and
+                      Aquarius.
+                    </p>
+                  </li>
+                  <li>
+                    <span>03</span>
+                    <p>
+                      Use the zodiac spells to cleanse the cursed dragon shrines
+                      and finish the air ritual.
+                    </p>
+                  </li>
+                  <li>
+                    <span>04</span>
+                    <p>
+                      Resolve both ritual paths and activate the final celestial
+                      beacon.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             MY ROLE
+             ===================================================== -->
+      <section class="anu-section" aria-labelledby="role-title">
+        <div class="anu-shell">
+          <div class="anu-section-heading anu-section-heading--split">
+            <div>
+              <p class="section-number">05 / MY ROLE</p>
+              <h2 id="role-title">
+                Working between design, art, and engineering.
+              </h2>
+            </div>
+
+            <p class="anu-heading-summary">
+              My goal was to use the capstone as a full production experience
+              while developing the cross-disciplinary skills required of a
+              technical artist. I focused on systems and tools that helped the
+              environment, spells, and player feedback work together as one
+              experience.
+            </p>
+          </div>
+
+          <div class="anu-role-grid">
+            <article class="anu-role-card">
+              <span class="anu-role-icon" aria-hidden="true">✦</span>
+              <p class="anu-card-label">GAME DESIGN & NARRATIVE</p>
+              <h3>Defined the world and its progression.</h3>
+              <ul>
+                <li>Authored the game design document, narrative, and lore.</li>
+                <li>
+                  Designed the restoration, illumination, and redemption quest
+                  themes.
+                </li>
+                <li>
+                  Contributed to mechanics, aesthetics, progression, and
+                  meaningful play.
+                </li>
+                <li>
+                  Connected zodiac powers to visible environmental
+                  transformation.
+                </li>
+              </ul>
+            </article>
+
+            <article class="anu-role-card">
+              <span class="anu-role-icon" aria-hidden="true">⬡</span>
+              <p class="anu-card-label">TECHNICAL ART & HOUDINI</p>
+              <h3>Built procedural tools for faster world building.</h3>
+              <ul>
+                <li>
+                  Created procedural rock, tree, and ivy Houdini Digital Assets.
+                </li>
+                <li>
+                  Exposed reusable controls for variation and level-design
+                  iteration.
+                </li>
+                <li>
+                  Integrated procedural assets into Unity through Houdini
+                  Engine.
+                </li>
+                <li>
+                  Explored artist-facing workflows that reduce repetitive asset
+                  creation.
+                </li>
+              </ul>
+            </article>
+
+            <article class="anu-role-card">
+              <span class="anu-role-icon" aria-hidden="true">✺</span>
+              <p class="anu-card-label">UNITY VFX & XR DEVELOPMENT</p>
+              <h3>Made every cast readable and responsive.</h3>
+              <ul>
+                <li>
+                  Created VFX for six spells plus the wand's drawing and casting
+                  visuals.
+                </li>
+                <li>
+                  Used particle systems, Shader Graph, and VFX Graph for
+                  projectiles and impacts.
+                </li>
+                <li>
+                  Assisted with core game systems, terrain optimization, and
+                  interactions.
+                </li>
+                <li>
+                  Debugged XR interactions, terrain clipping, and graphical
+                  issues.
+                </li>
+              </ul>
+            </article>
+
+            <article class="anu-role-card">
+              <span class="anu-role-icon" aria-hidden="true">◉</span>
+              <p class="anu-card-label">AUDIO & ITERATION</p>
+              <h3>Used sound and testing to support immersion.</h3>
+              <ul>
+                <li>
+                  Researched, selected, and implemented music and sound effects.
+                </li>
+                <li>
+                  Connected audio feedback to spells, environments, and quest
+                  events.
+                </li>
+                <li>
+                  Conducted more than 50 playtests during the ten-week
+                  production cycle.
+                </li>
+                <li>
+                  Translated player observations into usability and game-feel
+                  improvements.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             SPELL SYSTEM
+             ===================================================== -->
+      <section
+        class="anu-section anu-section--systems"
+        aria-labelledby="systems-title"
+      >
+        <div class="anu-shell">
+          <div class="anu-section-heading">
+            <p class="section-number">06 / TECHNICAL IMPLEMENTATION</p>
+            <h2 id="systems-title">
+              From a controller stroke to a world-changing spell.
+            </h2>
+          </div>
+
+          <div class="anu-system-intro">
+            <p>
+              The team's spell architecture separated drawing, preprocessing,
+              recognition, casting, and world interaction into focused
+              components. A central <code>WandManager</code> coordinated state
+              transitions between Idle, Drawing, Recognizing, and Casting, while
+              spell and gesture data were organized with ScriptableObjects for
+              easier iteration.
+            </p>
+
+            <p>
+              I contributed game content, VFX, procedural assets, environmental
+              interactions, debugging, and system integration within this shared
+              architecture. Quest managers then listened for completed
+              objectives, unlocked new spells, enabled the next puzzle phase,
+              and activated each beacon when a ritual was complete.
+            </p>
+          </div>
+
+          <div class="anu-pipeline" aria-label="Spell casting pipeline">
+            <article>
+              <span>01</span>
+              <strong>Draw</strong>
+              <p>
+                Capture the controller's movement as a three-dimensional stroke.
+              </p>
+            </article>
+
+            <div class="anu-pipeline-arrow" aria-hidden="true">→</div>
+
+            <article>
+              <span>02</span>
+              <strong>Normalize</strong>
+              <p>
+                Preprocess the sampled points so gestures can be compared
+                consistently.
+              </p>
+            </article>
+
+            <div class="anu-pipeline-arrow" aria-hidden="true">→</div>
+
+            <article>
+              <span>03</span>
+              <strong>Recognize</strong>
+              <p>
+                Compare the stroke against prepared spell templates and accuracy
+                metrics.
+              </p>
+            </article>
+
+            <div class="anu-pipeline-arrow" aria-hidden="true">→</div>
+
+            <article>
+              <span>04</span>
+              <strong>Cast</strong>
+              <p>
+                Spawn the corresponding spell projectile, VFX, and audio
+                feedback.
+              </p>
+            </article>
+
+            <div class="anu-pipeline-arrow" aria-hidden="true">→</div>
+
+            <article>
+              <span>05</span>
+              <strong>Transform</strong>
+              <p>
+                Notify interactables and quest managers so the environment
+                responds.
+              </p>
+            </article>
+          </div>
+
+          <div class="anu-architecture-grid">
+            <!-- IMAGE PLACEHOLDER 06
+                         Replace with a clean export of the spell architecture diagram.
+                         You can recreate the hand-drawn diagram from page 3 of the report,
+                         or use a screenshot if it remains readable.
+                    -->
+            <div
+              class="anu-placeholder anu-placeholder--diagram"
+              role="img"
+              aria-label="Placeholder for the Path of Anu spell system architecture diagram"
+            >
+              <span class="anu-placeholder-number">DIAGRAM 01</span>
+              <div>
+                <strong
+                  >Replace with the spell-system architecture diagram</strong
+                >
+                <p>
+                  Show WandManager, SpellDrawer, SpellRecognizer, Processor,
+                  Recognizer, and SpellCaster.
+                </p>
+                <code>images/path-of-anu/spell-architecture.png</code>
+              </div>
+            </div>
+
+            <div class="anu-architecture-notes">
+              <article>
+                <span>STATE MANAGEMENT</span>
+                <h3>Clear phases reduced conflicting input.</h3>
+                <p>
+                  Explicit states controlled when the player could draw, when
+                  the system should evaluate a gesture, and when a spell could
+                  be cast.
+                </p>
+              </article>
+
+              <article>
+                <span>DATA-DRIVEN SPELLS</span>
+                <h3>ScriptableObjects supported faster iteration.</h3>
+                <p>
+                  Gesture templates and spell data could be edited and organized
+                  without hard-coding every variation into the controller logic.
+                </p>
+              </article>
+
+              <article>
+                <span>QUEST ORCHESTRATION</span>
+                <h3>Managers converted interactions into progression.</h3>
+                <p>
+                  Each quest tracked its own objectives, unlocked zodiac spells,
+                  enabled the next interaction set, and activated a beacon VFX.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             TECHNICAL ART PIPELINE
+             ===================================================== -->
+      <section class="anu-section" aria-labelledby="tech-art-title">
+        <div class="anu-shell">
+          <div class="anu-section-heading anu-section-heading--split">
+            <div>
+              <p class="section-number">07 / TECHNICAL ART</p>
+              <h2 id="tech-art-title">
+                Procedural tools with an artist-facing purpose.
+              </h2>
+            </div>
+
+            <p class="anu-heading-summary">
+              I used Path of Anu to investigate how Houdini Digital Assets could
+              help a small team create and revise environment content without
+              rebuilding every prop by hand. This exploration later expanded
+              into my senior project on procedural level-design tools for Unity.
+            </p>
+          </div>
+
+          <div
+            class="anu-hda-pipeline"
+            aria-label="Houdini Digital Asset pipeline"
+          >
+            <article>
+              <span>HOUDINI</span>
+              <strong>Build the procedural network</strong>
+              <p>
+                Create geometry, variation, scattering, and attribute logic with
+                reusable nodes.
+              </p>
+            </article>
+
+            <div aria-hidden="true">→</div>
+
+            <article>
+              <span>HDA</span>
+              <strong>Expose useful controls</strong>
+              <p>
+                Package the network as an artist-friendly tool with adjustable
+                parameters.
+              </p>
+            </article>
+
+            <div aria-hidden="true">→</div>
+
+            <article>
+              <span>UNITY</span>
+              <strong>Iterate inside the level</strong>
+              <p>
+                Use Houdini Engine to create variations directly in the game
+                editor.
+              </p>
+            </article>
+          </div>
+
+          <div class="anu-hda-grid">
+            <article class="anu-hda-card">
+              <!-- IMAGE PLACEHOLDER 07 -->
+              <div
+                class="anu-placeholder anu-placeholder--tool"
+                role="img"
+                aria-label="Placeholder for the procedural rock Houdini Digital Asset"
+              >
+                <span class="anu-placeholder-number">IMAGE 07</span>
+                <div>
+                  <strong>Rock HDA</strong>
+                  <p>Use a split image: Houdini node graph + Unity result.</p>
+                </div>
+              </div>
+
+              <div class="anu-hda-card-copy">
+                <span>PROCEDURAL ENVIRONMENT TOOL</span>
+                <h3>Rock Generator</h3>
+                <p>
+                  Produced stylized rock variations through parameter-driven
+                  shape, noise, scale, and seed controls for repeated use across
+                  the world.
+                </p>
+              </div>
+            </article>
+
+            <article class="anu-hda-card">
+              <!-- IMAGE PLACEHOLDER 08 -->
+              <div
+                class="anu-placeholder anu-placeholder--tool"
+                role="img"
+                aria-label="Placeholder for the procedural tree Houdini Digital Asset"
+              >
+                <span class="anu-placeholder-number">IMAGE 08</span>
+                <div>
+                  <strong>Tree HDA</strong>
+                  <p>
+                    Use a split image: exposed parameters + final tree
+                    variation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="anu-hda-card-copy">
+                <span>PROCEDURAL FOLIAGE TOOL</span>
+                <h3>Tree Generator</h3>
+                <p>
+                  Explored reusable trunks, branches, foliage placement, and
+                  variation controls to support fantasy environment composition.
+                </p>
+              </div>
+            </article>
+
+            <article class="anu-hda-card">
+              <!-- IMAGE PLACEHOLDER 09 -->
+              <div
+                class="anu-placeholder anu-placeholder--tool"
+                role="img"
+                aria-label="Placeholder for the procedural ivy Houdini Digital Asset"
+              >
+                <span class="anu-placeholder-number">IMAGE 09</span>
+                <div>
+                  <strong>Ivy HDA</strong>
+                  <p>
+                    Use a split image: curve or node network + foliage in Unity.
+                  </p>
+                </div>
+              </div>
+
+              <div class="anu-hda-card-copy">
+                <span>PROCEDURAL FOLIAGE TOOL</span>
+                <h3>Ivy Generator</h3>
+                <p>
+                  Generated vine-like growth and instanced leaves to quickly add
+                  organic detail and visual storytelling to environmental
+                  surfaces.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="anu-vfx-feature">
+            <div class="anu-vfx-copy">
+              <p class="anu-card-label">SPELL VFX & VISUAL FEEDBACK</p>
+              <h3>Six spell effects, one consistent magical language.</h3>
+              <p>
+                I created projectile, impact, interaction, and wand visuals with
+                Unity particle systems, Shader Graph, and VFX Graph. The effects
+                had to communicate spell identity, travel direction, successful
+                hits, and environmental change without overwhelming the player's
+                view in VR.
+              </p>
+
+              <ul class="anu-check-list">
+                <li>
+                  Distinct silhouettes and color families for spell readability
+                </li>
+                <li>Wand trails that made three-dimensional drawing visible</li>
+                <li>
+                  Impact effects that confirmed successful puzzle interactions
+                </li>
+                <li>
+                  Environmental VFX that gave each completed ritual a sense of
+                  weight
+                </li>
+              </ul>
+            </div>
+
+            <!-- IMAGE PLACEHOLDER 10
+                         Replace with a 2x2 spell VFX montage or a strong spell projectile shot.
+                    -->
+            <div
+              class="anu-placeholder anu-placeholder--landscape"
+              role="img"
+              aria-label="Placeholder for a montage of Path of Anu spell visual effects"
+            >
+              <span class="anu-placeholder-number">IMAGE 10</span>
+              <div>
+                <strong>Replace with a spell VFX montage</strong>
+                <p>
+                  Suggested: wand trail, projectile, impact, and environmental
+                  response.
+                </p>
+                <code>images/path-of-anu/spell-vfx-grid.jpg</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             AUDIO
+             ===================================================== -->
+      <section
+        class="anu-section anu-section--audio"
+        aria-labelledby="audio-title"
+      >
+        <div class="anu-shell anu-audio-grid">
+          <div>
+            <p class="section-number">08 / SOUND & IMMERSION</p>
+            <h2 id="audio-title">
+              Sound made invisible systems feel tangible.
+            </h2>
+          </div>
+
+          <div class="anu-audio-copy">
+            <p>
+              I researched, selected, and implemented sound effects and music to
+              reinforce the meaning of each interaction. In VR, audio helped
+              players understand whether a gesture had been recognized, whether
+              a spell had connected, and whether a ritual state had changed—even
+              when the source was outside their immediate field of view.
+            </p>
+
+            <div class="anu-audio-points">
+              <article>
+                <span>CAST</span>
+                <p>
+                  Immediate feedback for gesture recognition and projectile
+                  release.
+                </p>
+              </article>
+
+              <article>
+                <span>IMPACT</span>
+                <p>
+                  Distinct confirmation when a spell reached the correct
+                  interactable.
+                </p>
+              </article>
+
+              <article>
+                <span>RITUAL</span>
+                <p>
+                  Layered cues that communicated unlocks, completion, and beacon
+                  activation.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             PLAYTESTING
+             ===================================================== -->
+      <section class="anu-section" aria-labelledby="testing-title">
+        <div class="anu-shell">
+          <div class="anu-testing-intro">
+            <div class="anu-testing-number" aria-label="More than 50 playtests">
+              <strong>50<span>+</span></strong>
+              <p>playtests across ten weeks</p>
+            </div>
+
+            <div>
+              <p class="section-number">09 / PLAYTESTING & ITERATION</p>
+              <h2 id="testing-title">
+                The headset revealed problems the editor could not.
+              </h2>
+              <p class="anu-heading-summary">
+                We tested with experienced VR developers and people who had
+                never worn a headset. Repeated observation helped us distinguish
+                between a mechanic that was difficult by design and one that was
+                simply unclear.
+              </p>
+            </div>
+          </div>
+
+          <div class="anu-iteration-grid">
+            <article class="anu-iteration-card">
+              <div class="anu-iteration-heading">
+                <span>CHALLENGE 01</span>
+                <h3>
+                  Players did not always understand how to reproduce a sigil.
+                </h3>
+              </div>
+
+              <div class="anu-iteration-response">
+                <span>ITERATION</span>
+                <p>
+                  Added visual spell replays and clearer drawing guidance so
+                  failed attempts became a learnable skill rather than
+                  unexplained rejection.
+                </p>
+              </div>
+            </article>
+
+            <article class="anu-iteration-card">
+              <div class="anu-iteration-heading">
+                <span>CHALLENGE 02</span>
+                <h3>
+                  XR locomotion collided unpredictably with detailed terrain.
+                </h3>
+              </div>
+
+              <div class="anu-iteration-response">
+                <span>ITERATION</span>
+                <p>
+                  Tested lower terrain resolution, adjusted locomotion settings,
+                  flattened problem areas, and added a respawn safeguard when
+                  players clipped.
+                </p>
+              </div>
+            </article>
+
+            <article class="anu-iteration-card">
+              <div class="anu-iteration-heading">
+                <span>CHALLENGE 03</span>
+                <h3>
+                  Magical interactions needed to read instantly in a busy
+                  environment.
+                </h3>
+              </div>
+
+              <div class="anu-iteration-response">
+                <span>ITERATION</span>
+                <p>
+                  Refined impact VFX, audio cues, environmental changes, and
+                  quest sequencing to make successful actions visible and
+                  satisfying.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="anu-testing-gallery">
+            <!-- IMAGE PLACEHOLDER 11 -->
+            <div
+              class="anu-placeholder anu-placeholder--small"
+              role="img"
+              aria-label="Placeholder for a Path of Anu playtesting photo"
+            >
+              <span class="anu-placeholder-number">IMAGE 11</span>
+              <div>
+                <strong>Playtesting photo</strong>
+                <p>Person wearing Quest 3, team observing, or test setup.</p>
+              </div>
+            </div>
+
+            <!-- IMAGE PLACEHOLDER 12 -->
+            <div
+              class="anu-placeholder anu-placeholder--small"
+              role="img"
+              aria-label="Placeholder for a Path of Anu iteration comparison"
+            >
+              <span class="anu-placeholder-number">IMAGE 12</span>
+              <div>
+                <strong>Iteration comparison</strong>
+                <p>
+                  Before/after terrain, spell guidance, or interaction feedback.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             RESULTS AND REFLECTION
+             ===================================================== -->
+      <section
+        class="anu-section anu-section--results"
+        aria-labelledby="results-title"
+      >
+        <div class="anu-shell">
+          <div class="anu-results-grid">
+            <div>
+              <p class="section-number">10 / RESULTS</p>
+              <h2 id="results-title">
+                A smaller scope produced a stronger experience.
+              </h2>
+            </div>
+
+            <div class="anu-results-copy">
+              <p class="anu-results-lead">
+                The original design included twelve zodiac quest points,
+                expanded dialogue, deeper emotional themes, personalized zodiac
+                compatibility, and a final confrontation with Tiamat. We reduced
+                that scope and delivered three complete quests centered on the
+                project's strongest technical and visual ideas.
+              </p>
+
+              <div class="anu-result-list">
+                <article>
+                  <span>01</span>
+                  <p>
+                    Three fully developed quest points with clear progression
+                    and completion states.
+                  </p>
+                </article>
+
+                <article>
+                  <span>02</span>
+                  <p>
+                    Eight total spells: four elemental abilities and four zodiac
+                    abilities.
+                  </p>
+                </article>
+
+                <article>
+                  <span>03</span>
+                  <p>
+                    Purposeful environmental reactions supported by custom VFX,
+                    shaders, audio, and assets.
+                  </p>
+                </article>
+
+                <article>
+                  <span>04</span>
+                  <p>
+                    A complete Meta Quest 3 experience refined through more than
+                    fifty playtests.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="anu-reflection-grid">
+            <article class="anu-reflection-card">
+              <p class="anu-card-label">WHAT I LEARNED</p>
+              <h3>VR usability is part of the visual design.</h3>
+              <p>
+                Beautiful effects were not enough. Each spell needed a readable
+                path, clear impact, immediate sound, and a visible consequence.
+                Working in a headset taught me to evaluate art through
+                interaction, comfort, scale, and player attention—not only
+                through screenshots.
+              </p>
+            </article>
+
+            <article class="anu-reflection-card">
+              <p class="anu-card-label">PRODUCTION LESSON</p>
+              <h3>
+                Scope is a design decision, not just a scheduling decision.
+              </h3>
+              <p>
+                Reducing twelve planned quests to three complete rituals allowed
+                us to preserve the core fantasy and improve what players would
+                actually touch, see, and understand. A smaller polished arc
+                communicated the idea better than a larger unfinished one.
+              </p>
+            </article>
+
+            <article class="anu-reflection-card">
+              <p class="anu-card-label">CAREER IMPACT</p>
+              <h3>The project confirmed my interest in technical art.</h3>
+              <p>
+                Path of Anu showed me how much I enjoy bridging artists and
+                engineers: building tools, integrating effects, debugging
+                systems, and protecting the visual intention of a world while
+                keeping it functional in real time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             FUTURE WORK
+             ===================================================== -->
+      <section class="anu-section" aria-labelledby="future-title">
+        <div class="anu-shell">
+          <div class="anu-section-heading anu-section-heading--split">
+            <div>
+              <p class="section-number">11 / FUTURE WORK</p>
+              <h2 id="future-title">
+                The original vision still points forward.
+              </h2>
+            </div>
+
+            <p class="anu-heading-summary">
+              These features were part of the intended direction but were not
+              completed in the capstone build. They show where I would take the
+              experience with additional development time.
+            </p>
+          </div>
+
+          <div class="anu-future-grid">
+            <article>
+              <span>01</span>
+              <h3>Complete the zodiac arc</h3>
+              <p>
+                Expand from three ritual areas to twelve quests, one for each
+                zodiac sign.
+              </p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>Integrate the full narrative</h3>
+              <p>
+                Add scripted dialogue, voice performance, emotional themes, and
+                the final Tiamat confrontation.
+              </p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>Expand the HDA toolkit</h3>
+              <p>
+                Create additional procedural buildings, trees, foliage, terrain,
+                and placement tools.
+              </p>
+            </article>
+
+            <article>
+              <span>04</span>
+              <h3>Optimize world streaming</h3>
+              <p>
+                Investigate chunk rendering, culling, terrain optimization, and
+                scalable VR level construction.
+              </p>
+            </article>
+
+            <article>
+              <span>05</span>
+              <h3>Deepen spell identity</h3>
+              <p>
+                Connect available spells and interactions to the player's zodiac
+                compatibility and progression.
+              </p>
+            </article>
+
+            <article>
+              <span>06</span>
+              <h3>Produce original audio</h3>
+              <p>
+                Compose music, record dialogue, and build a more reactive audio
+                system around rituals and exploration.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             DEVELOPMENT GALLERY
+             ===================================================== -->
+      <section
+        class="anu-section anu-section--gallery"
+        aria-labelledby="gallery-title"
+      >
+        <div class="anu-shell">
+          <div class="anu-section-heading">
+            <p class="section-number">12 / DEVELOPMENT GALLERY</p>
+            <h2 id="gallery-title">
+              Replace these blocks as your media library grows.
+            </h2>
+          </div>
+
+          <p class="anu-gallery-note">
+            Use a mix of polished screenshots and process images. Recruiters
+            should see both the final experience and the decisions behind it.
+          </p>
+
+          <div class="anu-gallery-grid">
+            <div
+              class="anu-placeholder anu-placeholder--gallery anu-gallery-wide"
+            >
+              <span class="anu-placeholder-number">IMAGE 13</span>
+              <div>
+                <strong>Final environment beauty shot</strong>
+                <p>Wide 16:9 image with strong lighting and composition.</p>
+              </div>
+            </div>
+
+            <div class="anu-placeholder anu-placeholder--gallery">
+              <span class="anu-placeholder-number">IMAGE 14</span>
+              <div>
+                <strong>Spell-drawing close-up</strong>
+                <p>Show the wand trail and sigil in three-dimensional space.</p>
+              </div>
+            </div>
+
+            <div class="anu-placeholder anu-placeholder--gallery">
+              <span class="anu-placeholder-number">IMAGE 15</span>
+              <div>
+                <strong>Unity VFX Graph or Shader Graph</strong>
+                <p>Pair the graph with the final effect when possible.</p>
+              </div>
+            </div>
+
+            <div class="anu-placeholder anu-placeholder--gallery">
+              <span class="anu-placeholder-number">IMAGE 16</span>
+              <div>
+                <strong>Houdini node network</strong>
+                <p>
+                  Choose one readable graph from the rock, tree, or ivy tool.
+                </p>
+              </div>
+            </div>
+
+            <div class="anu-placeholder anu-placeholder--gallery">
+              <span class="anu-placeholder-number">IMAGE 17</span>
+              <div>
+                <strong>Unity HDA controls</strong>
+                <p>
+                  Show exposed parameters and multiple generated variations.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="anu-placeholder anu-placeholder--gallery anu-gallery-wide"
+            >
+              <span class="anu-placeholder-number">IMAGE 18</span>
+              <div>
+                <strong>Quest progression or before/after strip</strong>
+                <p>Show how an area changes from dormant to restored.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             NEXT STEP
+             ===================================================== -->
+      <section class="anu-next-project">
+        <div class="anu-shell anu-next-project-inner">
+          <div>
+            <p class="section-number">CONTINUE EXPLORING</p>
+            <h2>See the rest of my gameplay and technical art work.</h2>
+          </div>
+
+          <a class="button button-primary" href="portfolio.html">
+            View All Projects
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="home-footer anu-footer">
+      <p>© 2026 Joaquin Arredondo</p>
+      <p>Gameplay programming · Technical art · Real-time graphics</p>
+    </footer>
+  </body>
+</html>

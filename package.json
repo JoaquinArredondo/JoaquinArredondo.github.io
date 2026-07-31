@@ -1,0 +1,12 @@
+{
+  "name": "joaquinarredondo.github.io",
+  "version": "1.0.0",
+  "description": "This is a personal website built using the Hack4Impact Starter Pack! <Aspiring Computer Science Student at Cal Poly Slo.> [Visit it Here!](https://github.com/JoaquinArredondo/JoaquinArredondo.github.io)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

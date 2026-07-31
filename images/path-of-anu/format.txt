@@ -1,0 +1,21 @@
+images/path-of-anu/anu-hero.jpg
+images/path-of-anu/quest-restoration.jpg
+images/path-of-anu/quest-illumination.jpg
+images/path-of-anu/quest-redemption.jpg
+images/path-of-anu/spell-vfx-grid.jpg
+images/path-of-anu/spell-architecture.png
+
+
+Replace a placeholder like this:
+
+<div class="anu-placeholder anu-placeholder--hero">
+    ...
+</div>
+
+with:
+
+<img
+    class="anu-media-image anu-media-image--hero"
+    src="images/path-of-anu/anu-hero.jpg"
+    alt="Path of Anu magical environment under a celestial sky"
+>

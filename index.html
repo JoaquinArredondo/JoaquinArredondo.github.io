@@ -1,45 +1,450 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>
-        Joaquin's Personal Website
-    </title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="The game development and technical art portfolio of Joaquin Arredondo."
+    />
+
+    <title>Joaquin Arredondo | Gameplay Programmer & Technical Artist</title>
+
     <link rel="stylesheet" href="styles.css" />
-<head>
-    <h1 class = "index-title">Joaquin's Personal Website</h1>  
+  </head>
 
-    <nav class = "navbar">
-        <h1 class = "logo">
-            <a href = "index.html">Personal Website</a>
-        </h1>
+  <body class="home-page">
+    <!-- Navigation -->
+    <header class="site-header">
+      <nav class="home-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"> JA<span>.</span> </a>
 
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <ul class="home-nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#featured-projects">Projects</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="home-main">
+      <!-- Hero -->
+      <section class="hero-section">
+        <div class="hero-background-shape hero-shape-one"></div>
+        <div class="hero-background-shape hero-shape-two"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">GAMEPLAY PROGRAMMER · TECHNICAL ARTIST</p>
+
+          <h1>
+            I build interactive worlds where
+            <span>engineering meets art.</span>
+          </h1>
+
+          <p class="hero-description">
+            I'm Joaquin Arredondo, a computer scientist and interactive artist
+            developing games, immersive VR experiences, real-time graphics,
+            procedural tools, and emotionally intelligent NPC systems.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button button-primary" href="#featured-projects">
+              Explore My Work
+            </a>
+
+            <a class="button button-secondary" href="resume.html">
+              View Resume
+            </a>
+          </div>
+
+          <ul class="hero-skills" aria-label="Primary skills">
+            <li>Unity</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>OpenGL</li>
+            <li>Houdini</li>
+            <li>Maya</li>
+            <li>XR</li>
           </ul>
-    </nav>
-
-<body>
-    <main>
-        <h1 class = "hw">HELLO WORLD!</h1>
-        <div class = "about">
-            <div class = "about-image"><img src="picofme.jpg" alt="Picute of me"></div>
-            <div class = "about-text"> 
-                <p class = "title">Introduction:</p>
-                <p class = "aboutinfo">My name is <strong>Joaquin Arredondo</strong> and I am a 2nd year <b>Computer Science</b> student. I am from the Bay 
-                Area more specifically East Bay (I live in Newark, but since most people don't know where that is I just say Fremont / Union City / Hayward). 
-                I like doing digital art on Procreate, I like singing and did acapella for 4 years in high school and did the choir 
-                 program here at Cal Poly, Polyphonics for about a year, my favorite show is Avatar the Last Airbender, 
-                 and I'm a part of the engineering fraternity <em>Sigma Phi Delta.</em></p> 
-            </div>
         </div>
-    
+
+        <div class="hero-visual">
+          <div class="portrait-frame">
+            <img src="picofme.jpg" alt="Portrait of Joaquin Arredondo" />
+
+            <div class="portrait-status">
+              <span class="status-dot"></span>
+              Open to game development opportunities
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-one">
+            <span>Current Focus</span>
+            <strong>Technical Art</strong>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <span>Building With</span>
+            <strong>Unity + Houdini</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introduction -->
+      <section class="home-section about-section" id="about">
+        <div class="section-heading">
+          <p class="section-number">01 / ABOUT</p>
+
+          <h2>
+            Creative problem solving across the game-development pipeline.
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-story">
+            <p class="large-paragraph">
+              My work exists at the intersection of computer science, visual
+              art, music, and interactive storytelling.
+            </p>
+
+            <p>
+              I began exploring game development through Minecraft, world
+              building, server communities, and modding. That curiosity grew
+              into a broader interest in gameplay programming, computer
+              graphics, technical art, and the systems that make digital worlds
+              feel responsive and alive.
+            </p>
+
+            <p>
+              At Cal Poly, I studied Computer Science and Computing for
+              Interactive Arts. My projects have taken me from custom OpenGL
+              renderers and psychologically grounded Game AI to VR spellcasting,
+              marine simulation, procedural tools, animation systems, and large
+              Unity environments.
+            </p>
+          </div>
+
+          <div class="about-details">
+            <article class="detail-card">
+              <span>Engineering</span>
+              <h3>Gameplay & Systems</h3>
+              <p>
+                Unity architecture, C# gameplay systems, Utility AI, responsive
+                interactions, debugging, optimization, and collaborative Git
+                workflows.
+              </p>
+            </article>
+
+            <article class="detail-card">
+              <span>Visual Development</span>
+              <h3>Technical Art</h3>
+              <p>
+                Houdini tools, Maya modeling and animation, procedural
+                workflows, materials, lighting, VFX, and environment design.
+              </p>
+            </article>
+
+            <article class="detail-card">
+              <span>Graphics</span>
+              <h3>Real-Time Rendering</h3>
+              <p>
+                C++, OpenGL, GLSL shaders, lighting models, terrain rendering,
+                GPU instancing, transformation matrices, and
+                performance-conscious visual systems.
+              </p>
+            </article>
+
+            <article class="detail-card">
+              <span>Research</span>
+              <h3>Game AI</h3>
+              <p>
+                Emotional NPCs informed by psychological frameworks, including
+                personality, emotion, relationships, memory, needs, and Utility
+                AI.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section class="home-section projects-section" id="featured-projects">
+        <div class="section-heading">
+          <p class="section-number">02 / SELECTED WORK</p>
+
+          <h2>
+            Projects built through experimentation, collaboration, and iterative
+            design.
+          </h2>
+        </div>
+
+        <div class="featured-project">
+          <div class="project-image project-image-ocean">
+            <img
+              src="websiteproj.png"
+              alt="Project preview for Joaquin's interactive work"
+            />
+
+            <span class="project-index">01</span>
+          </div>
+
+          <div class="project-information">
+            <p class="project-type">VR DEVELOPMENT · UNITY · MAYA</p>
+
+            <h3>VR Ocean Site One</h3>
+
+            <p>
+              An immersive VR experience designed to teach players about
+              biodiversity surrounding an offshore research site.
+            </p>
+
+            <div class="project-breakdown">
+              <div>
+                <strong>Problem</strong>
+                <p>
+                  The experience needed believable marine predators, responsive
+                  animation, and clear gameplay behavior within an existing VR
+                  project.
+                </p>
+              </div>
+
+              <div>
+                <strong>Solution</strong>
+                <p>
+                  I modeled, rigged, weight-painted, animated, and integrated a
+                  shark and barracuda while building Unity animation controllers
+                  and supporting AI behavior.
+                </p>
+              </div>
+
+              <div>
+                <strong>Implementation</strong>
+                <p>
+                  Maya, IK systems, deformers, Unity Animator, C#, XR Toolkit,
+                  audio systems, Agile development, and iterative client
+                  reviews.
+                </p>
+              </div>
+            </div>
+
+            <a class="text-link" href="portfolio.html">
+              View project details
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card-grid">
+          <article class="home-project-card">
+            <div class="project-card-top">
+              <span>GAME AI · RESEARCH</span>
+              <span>02</span>
+            </div>
+
+            <h3>Romance in Games</h3>
+
+            <p>
+              A research-driven Unity simulation exploring how psychologically
+              grounded systems can produce more emotionally believable NPC
+              relationships.
+            </p>
+
+            <ul>
+              <li>Utility AI decision-making</li>
+              <li>MBTI personality framework</li>
+              <li>PAD emotional state modeling</li>
+              <li>Context-aware relationships</li>
+            </ul>
+
+            <a class="text-link" href="portfolio.html">
+              Explore research
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="home-project-card">
+            <div class="project-card-top">
+              <span>UNITY · GAME DESIGN</span>
+              <span>03</span>
+            </div>
+
+            <h3>Seasick Scallywags</h3>
+
+            <p>
+              A stylized nautical dungeon crawler featuring large environments,
+              enemy encounters, progressive difficulty, and
+              performance-conscious scene management.
+            </p>
+
+            <ul>
+              <li>Chunk management and culling</li>
+              <li>Six enemy behavior systems</li>
+              <li>Lighting and post-processing</li>
+              <li>Playtesting and team leadership</li>
+            </ul>
+
+            <a class="text-link" href="portfolio.html">
+              Explore project
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="home-project-card">
+            <div class="project-card-top">
+              <span>VR · HOUDINI · UNITY</span>
+              <span>04</span>
+            </div>
+
+            <h3>Path of Anu</h3>
+
+            <p>
+              A VR spellcasting puzzle experience combining interactive magic,
+              environmental storytelling, visual effects, procedural assets, and
+              responsive puzzle systems.
+            </p>
+
+            <ul>
+              <li>Spell interaction systems</li>
+              <li>Procedural Houdini assets</li>
+              <li>Puzzle and game managers</li>
+              <li>VFX, lighting, and audio</li>
+            </ul>
+
+            <a class="text-link" href="path-of-anu.html">
+              Explore project
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="home-project-card">
+            <div class="project-card-top">
+              <span>C++ · OPENGL · GLSL</span>
+              <span>05</span>
+            </div>
+
+            <h3>Real-Time Graphics</h3>
+
+            <p>
+              A collection of graphics projects exploring the rendering
+              pipeline, shaders, procedural terrain, lighting, instancing,
+              materials, animation, and optimization.
+            </p>
+
+            <ul>
+              <li>Custom GLSL shaders</li>
+              <li>Blinn-Phong lighting</li>
+              <li>Heightmaps and splatmaps</li>
+              <li>GPU-instanced environments</li>
+            </ul>
+
+            <a class="text-link" href="portfolio.html">
+              Explore graphics work
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="home-section experience-section">
+        <div class="section-heading">
+          <p class="section-number">03 / EXPERIENCE</p>
+
+          <h2>
+            I enjoy building projects—and helping other developers learn how to
+            build theirs.
+          </h2>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <div>
+              <span>2025–2026</span>
+            </div>
+
+            <div>
+              <h3>Instructional Student Assistant</h3>
+              <p>California Polytechnic State University</p>
+            </div>
+
+            <p>
+              Mentored more than 30 students across introductory computing and
+              game-development courses. Supported debugging, grading, Unity, C#,
+              JavaScript, game mechanics, game feel, and iterative design.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <div>
+              <span>2025 & 2026</span>
+            </div>
+
+            <div>
+              <h3>SIGGRAPH Student Volunteer</h3>
+              <p>SIGGRAPH</p>
+            </div>
+
+            <p>
+              Supported conference operations while learning directly from
+              professionals working across computer graphics, interactive
+              technology, animation, games, and virtual production.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <div>
+              <span>2021–2022</span>
+            </div>
+
+            <div>
+              <h3>Computer Technician</h3>
+              <p>New Haven Unified School District</p>
+            </div>
+
+            <p>
+              Maintained and distributed more than 5,000 computers while
+              coordinating with district leadership to improve technology
+              operations and device organization.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Callout -->
+      <section class="home-contact-section">
+        <p class="section-number">04 / LET'S CONNECT</p>
+
+        <h2>Have an interesting game, graphics, or interactive project?</h2>
+
+        <p>
+          I am interested in gameplay programming, technical art, computer
+          graphics, immersive development, and creative technology
+          opportunities.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button button-primary" href="contact.html"> Contact Me </a>
+
+          <a
+            class="button button-secondary"
+            href="https://github.com/JoaquinArredondo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer class = "footer"> © 2023 <Joaquin's Personal Website> | All Rights Reserved </footer>   
-   
- </body>
+    <footer class="home-footer">
+      <p>© 2026 Joaquin Arredondo</p>
+
+      <p>Designed and developed with intention.</p>
+    </footer>
+  </body>
 </html>
