@@ -1087,3 +1087,12 @@ a {
   aspect-ratio: 960 / 494;
   object-fit: cover;
 }
+.rt-hero__copy {
+    position: relative;
+    z-index: 5;
+}
+
+.rt-hero__media {
+    position: relative;
+    z-index: 2;
+}
