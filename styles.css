@@ -3162,3 +3162,225 @@
     min-height: 300px;
   }
 }
+
+
+/* =========================================================
+   SURP ROMANCE RESEARCH PROJECT CARD
+   ========================================================= */
+
+.project-card--romance {
+  position: relative;
+  overflow: hidden;
+
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(220, 92, 139, 0.18),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(30, 28, 45, 0.96),
+      rgba(17, 18, 28, 0.98)
+    );
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.project-card--romance::before {
+  content: "";
+
+  position: absolute;
+  top: -90px;
+  right: -90px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(220, 92, 139, 0.12);
+  filter: blur(12px);
+
+  pointer-events: none;
+}
+
+.project-card--romance:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(225, 128, 166, 0.38);
+
+  box-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(220, 92, 139, 0.08);
+}
+
+.project-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card-category {
+  margin: 0 0 0.8rem;
+
+  color: #e39ab6;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.project-card-title {
+  margin: 0 0 1rem;
+
+  color: #ffffff;
+
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.project-card-description {
+  max-width: 720px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  margin: 1.5rem 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.project-card-tags li {
+  padding: 0.5rem 0.8rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.055);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  margin-top: 1.75rem;
+}
+
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+
+  min-height: 48px;
+  padding: 0.8rem 1.15rem;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.project-button--primary {
+  color: #18131a;
+
+  background: linear-gradient(
+    135deg,
+    #f4b3cc,
+    #df8caf
+  );
+
+  box-shadow: 0 10px 28px rgba(220, 92, 139, 0.2);
+}
+
+.project-button--primary:hover {
+  transform: translateY(-2px);
+
+  color: #18131a;
+
+  background: linear-gradient(
+    135deg,
+    #fac6da,
+    #e79cba
+  );
+
+  box-shadow: 0 14px 34px rgba(220, 92, 139, 0.3);
+}
+
+.project-button-arrow {
+  display: inline-block;
+
+  font-size: 1rem;
+
+  transition: transform 180ms ease;
+}
+
+.project-button:hover .project-button-arrow {
+  transform: translate(2px, -2px);
+}
+
+.project-button:focus-visible {
+  outline: 3px solid rgba(244, 179, 204, 0.4);
+  outline-offset: 4px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .project-card--romance {
+    padding: 1.4rem;
+    border-radius: 18px;
+  }
+
+  .project-card-actions {
+    flex-direction: column;
+  }
+
+  .project-button {
+    width: 100%;
+  }
+}

@@ -40,7 +40,7 @@
     <main class="scally-main" id="main-content">
       <!-- =====================================================
            HERO
-           ===================================================== -->
+           ===============images/seasick/seasickcomposite.png====================================== -->
       <section class="scally-hero" aria-labelledby="scally-title">
         <div class="scally-grid" aria-hidden="true"></div>
         <div class="scally-horizon" aria-hidden="true"></div>
@@ -100,10 +100,10 @@
 
           <figure
             class="scally-media scally-media--hero"
-            data-placeholder="ADD HERO IMAGE · images/seasick/seasick-hero.jpg"
+            data-placeholder="ADD HERO IMAGE · images/seasick/seasickcover.png"
           >
             <img
-              src="images/seasick/seasick-hero.jpg"
+              src="images/seasick/seasickcover.png"
               alt="Captain Wigglefoot's ship sailing through the Seasick Scallywags ocean environment"
               fetchpriority="high"
               decoding="async"
@@ -214,10 +214,10 @@
           <div class="scally-level-layout">
             <figure
               class="scally-media scally-media--level"
-              data-placeholder="ADD LEVEL IMAGE · images/seasick/level-design.jpg"
+              data-placeholder="ADD LEVEL IMAGE · images/seasick/Screenshot 2026-08-04 at 3.46.18 AM.png"
             >
               <img
-                src="images/seasick/level-design.jpg"
+                src="images/seasick/Screenshot 2026-08-04 at 3.46.18 AM.png"
                 alt="Unity Scene view showing Seasick Scallywags terrain and route composition"
                 loading="lazy"
                 decoding="async"
@@ -316,10 +316,10 @@
 
             <figure
               class="scally-media scally-media--system"
-              data-placeholder="ADD SYSTEM IMAGE · images/seasick/chunk-system.jpg"
+              data-placeholder="ADD SYSTEM IMAGE · images/seasick/chunkserilized.png"
             >
               <img
-                src="images/seasick/chunk-system.jpg"
+                src="images/seasick/chunkserilized.png"
                 alt="Unity chunk management and enemy spawning setup for Seasick Scallywags"
                 loading="lazy"
                 decoding="async"
@@ -358,10 +358,10 @@
           <div class="scally-iteration-layout">
             <figure
               class="scally-media scally-media--iteration"
-              data-placeholder="ADD ENCOUNTER IMAGE · images/seasick/encounter-iteration.jpg"
+              data-placeholder="ADD ENCOUNTER IMAGE · images/seasick/seasickimage0.png"
             >
               <img
-                src="images/seasick/encounter-iteration.jpg"
+                src="images/seasick/seasickimage0.png"
                 alt="Seasick Scallywags boss or enemy encounter after playtesting changes"
                 loading="lazy"
                 decoding="async"
@@ -406,44 +406,77 @@
       </section>
 
       <!-- =====================================================
-           VIDEO + RESULT
+           DEVELOPMENT GALLERY + RESULT
            ===================================================== -->
-      <section class="scally-section scally-section--reel" aria-labelledby="reel-title">
+      <section
+        class="scally-section scally-section--reel"
+        aria-labelledby="gallery-title"
+      >
         <div class="scally-shell">
           <div class="scally-section-head">
-            <p class="section-number">05 / GAMEPLAY</p>
+            <p class="section-number">05 / DEVELOPMENT GALLERY</p>
             <div>
-              <h2 id="reel-title">Show the route, the systems, and the decisions.</h2>
+              <h2 id="gallery-title">
+                A focused look at the world, encounters, and systems behind the final build.
+              </h2>
               <p class="scally-section-summary">
-                A short reel should demonstrate sailing, cannon aiming, changing
-                enemy compositions, shops and resources, both stage identities,
-                and one complete boss encounter.
+                Because this was a smaller eight-week project, this page focuses on
+                the most useful production evidence: level composition, enemy and boss
+                encounters, technical scene management, and the changes made through
+                playtesting.
               </p>
             </div>
           </div>
 
-          <!--
-            Local MP4 version: works offline and on GitHub Pages.
-            Add:
-              videos/seasick/seasick-gameplay.mp4
-              images/seasick/seasick-video-poster.jpg
-          -->
-          <div
-            class="scally-video-frame"
-            data-placeholder="ADD VIDEO · videos/seasick/seasick-gameplay.mp4"
-          >
-            <video
-              controls
-              preload="metadata"
-              playsinline
-              poster="images/seasick/seasick-video-poster.jpg"
+          <div class="scally-iteration-layout">
+            <figure
+              class="scally-media scally-media--iteration"
+              data-placeholder="ADD FINAL GAMEPLAY IMAGE · images/seasick/seasickcomposite.png"
             >
-              <source
-                src="videos/seasick/seasick-gameplay.mp4"
-                type="video/mp4"
+              <img
+                src="images/seasick/seasickcomposite.png"
+                alt="Final Seasick Scallywags gameplay showing the ship navigating a designed ocean encounter"
+                loading="lazy"
+                decoding="async"
+                onerror="this.hidden=true"
               />
-              Your browser does not support embedded MP4 video.
-            </video>
+              <figcaption>
+                <span>FINAL EXPERIENCE</span>
+                <strong>Navigation, combat, resource decisions, and encounter pacing</strong>
+              </figcaption>
+            </figure>
+
+            <div class="scally-change-list">
+              <article>
+                <span>LEVEL FLOW</span>
+                <h3>Each route was designed around readable decisions.</h3>
+                <p>
+                  Open water, terrain walls, landmarks, shops, hazards, and enemy
+                  placement worked together to help the player understand when to
+                  advance, evade, backtrack, or prepare for a boss.
+                </p>
+              </article>
+
+              <article>
+                <span>TECHNICAL DESIGN</span>
+                <h3>Large spaces depended on controlled activation.</h3>
+                <p>
+                  Chunk management, enemy lifecycle rules, and scalable spawning
+                  allowed the game to present a larger voyage without simulating or
+                  rendering the full world at once.
+                </p>
+              </article>
+
+              <article>
+                <span>ITERATIVE DESIGN</span>
+                <h3>The final layout reflects what players actually did.</h3>
+                <p>
+                  Playtesting informed navigation cues, aiming behavior, encounter
+                  density, difficulty escalation, and the decision to replace an
+                  over-scoped open world with two more focused stages.
+                </p>
+              </article>
+            </div>
           </div>
 
           <div class="scally-result">
@@ -453,11 +486,10 @@
             </div>
             <div>
               <p>
-                Seasick Scallywags taught me that level design is not only
-                terrain placement. It is the relationship between visual
-                guidance, technical constraints, enemy behavior, resource flow,
-                difficulty pacing, and what players actually do when the game is
-                placed in front of them.
+                Seasick Scallywags taught me that level design is not only terrain
+                placement. It is the relationship between visual guidance, technical
+                constraints, enemy behavior, resource flow, difficulty pacing, and
+                what players actually do when the game is placed in front of them.
               </p>
               <a
                 class="scally-play-link"

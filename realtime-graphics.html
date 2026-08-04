@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CMYKingdom real-time graphics case study by Joaquin Arredondo, featuring terrain rendering, environment design, and an instanced grass shader in a custom C++ and OpenGL engine."
+  />
+  <title>CMYKingdom | Real-Time Graphics | Joaquin Arredondo</title>
+  <link rel="stylesheet" href="realtime-graphics.css" />
+</head>
+
+<body class="rt-page">
+  <a class="rt-skip-link" href="#main-content">Skip to content</a>
+
+  <!--
+    NAVIGATION
+    Update these file names if your portfolio uses different routes.
+  -->
+  <header class="rt-header">
+    <div class="rt-shell rt-header__inner">
+      <a class="rt-brand" href="index.html" aria-label="Joaquin Arredondo home">
+        <span class="rt-brand__mark" aria-hidden="true">JA</span>
+        <span class="rt-brand__text">Joaquin Arredondo</span>
+      </a>
+
+      <nav class="rt-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+    <section class="rt-hero" aria-labelledby="rt-title">
+      <div class="rt-hero__grid" aria-hidden="true"></div>
+      <div class="rt-hero__glow rt-hero__glow--cyan" aria-hidden="true"></div>
+      <div class="rt-hero__glow rt-hero__glow--magenta" aria-hidden="true"></div>
+
+      <div class="rt-shell rt-hero__layout">
+        <div class="rt-hero__copy">
+          <p class="rt-eyebrow">
+            Real-Time Graphics / Custom Engine / 10-Week Team Project
+          </p>
+
+          <h1 id="rt-title">
+            <span class="rt-title-cyan">C</span><span class="rt-title-magenta">M</span><span class="rt-title-yellow">Y</span>Kingdom
+          </h1>
+
+          <p class="rt-hero__lede">
+            A colorful 3D exploration game built with C++, OpenGL, and GLSL.
+            I developed the terrain-rendering workflow, designed the game environment,
+            and implemented the instanced grass shader used throughout the world.
+          </p>
+
+          <div class="rt-actions" aria-label="Project links">
+            <a
+              class="rt-button rt-button--primary"
+              href="https://brennanandruss.github.io/CMYKingdom/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Team Project Site <span aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a
+              class="rt-button rt-button--secondary"
+              href="https://github.com/BrennanAndruss/CMYKingdom"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Source Code <span aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a class="rt-text-link" href="#demo">
+              Watch the demo <span aria-hidden="true">&darr;</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="rt-hero__media">
+          <img
+            src="images/realtime/sceneoverview.png"
+            alt="Wide aerial view of CMYKingdom's mountain, forest, and desert environments"
+            width="1000"
+            height="401"
+          />
+          <figcaption>
+            A custom-rendered kingdom composed of contrasting biomes and terrain materials.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="rt-shell rt-project-meta" aria-label="Project details">
+        <div class="rt-meta-item">
+          <span>Role</span>
+          <strong>Graphics Programmer<br />Environment Designer</strong>
+        </div>
+
+        <div class="rt-meta-item">
+          <span>Core Contributions</span>
+          <strong>Terrain Rendering<br />Instanced Grass</strong>
+        </div>
+
+        <div class="rt-meta-item">
+          <span>Technology</span>
+          <strong>C++ / OpenGL<br />GLSL / Unity Terrain</strong>
+        </div>
+
+        <div class="rt-meta-item">
+          <span>Course</span>
+          <strong>CSC 476<br />Real-Time 3D Graphics</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PROJECT OVERVIEW
+         ===================================================== -->
+    <section class="rt-section" aria-labelledby="overview-title">
+      <div class="rt-shell rt-two-column">
+        <div class="rt-section-heading">
+          <p class="rt-section-number">01 / Project Overview</p>
+          <h2 id="overview-title">Restoring color to a kingdom built from the rendering pipeline up.</h2>
+        </div>
+
+        <div class="rt-copy">
+          <p class="rt-copy__lead">
+            CMYKingdom places the player in a magical world that has lost its color.
+            The player explores the environment and collects cyan, magenta, and yellow
+            crystals to bring color back to the kingdom.
+          </p>
+
+          <p>
+            Rather than relying on a commercial engine for rendering, our five-person
+            team built the experience in a custom C++ and OpenGL engine. The project
+            required us to connect low-level graphics systems with gameplay, tools,
+            animation, physics, audio, and a large navigable environment.
+          </p>
+
+          <div class="rt-chip-row" aria-label="Project technologies">
+            <span>C++</span>
+            <span>OpenGL</span>
+            <span>GLSL</span>
+            <span>Unity Terrain</span>
+            <span>Heightmaps</span>
+            <span>Splatmaps</span>
+            <span>GPU Instancing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MY ROLE
+         ===================================================== -->
+    <section class="rt-section rt-section--ink" aria-labelledby="role-title">
+      <div class="rt-shell">
+        <div class="rt-section-heading rt-section-heading--wide">
+          <p class="rt-section-number">02 / My Role</p>
+          <h2 id="role-title">Turning terrain data into a playable visual world.</h2>
+          <p>
+            My work sat between graphics programming and technical art: I established
+            the environment visually, then built the systems needed to reproduce that
+            design efficiently inside our custom engine.
+          </p>
+        </div>
+
+        <div class="rt-role-grid">
+          <article class="rt-role-card rt-role-card--cyan">
+            <p class="rt-role-card__index">01</p>
+            <h3>Terrain Rendering</h3>
+            <p>
+              Built the workflow for loading exported terrain data and rendering the
+              kingdom's landforms inside the OpenGL engine.
+            </p>
+            <ul>
+              <li>Heightmap-driven terrain mesh generation</li>
+              <li>Splatmap-based material blending</li>
+              <li>Terrain masks and texture preparation</li>
+              <li>Coordination with the terrain collider pipeline</li>
+            </ul>
+          </article>
+
+          <article class="rt-role-card rt-role-card--magenta">
+            <p class="rt-role-card__index">02</p>
+            <h3>Environment Design</h3>
+            <p>
+              Sculpted and composed the playable world so the forest, mountain, coastal,
+              and desert regions felt distinct while remaining part of one kingdom.
+            </p>
+            <ul>
+              <li>Terrain composition and world silhouette</li>
+              <li>Biome layout and visual transitions</li>
+              <li>Asset placement and environmental readability</li>
+              <li>Texture iteration for a cohesive stylized look</li>
+            </ul>
+          </article>
+
+          <article class="rt-role-card rt-role-card--yellow">
+            <p class="rt-role-card__index">03</p>
+            <h3>Instanced Grass Shader</h3>
+            <p>
+              Implemented instanced vegetation rendering so repeated grass geometry
+              could cover the environment without requiring a separate draw call for
+              every individual blade or patch.
+            </p>
+            <ul>
+              <li>Instanced grass rendering</li>
+              <li>Terrain-aware placement</li>
+              <li>Animated wind movement</li>
+              <li>Large-environment performance awareness</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TERRAIN PIPELINE
+         ===================================================== -->
+    <section class="rt-section" aria-labelledby="pipeline-title">
+      <div class="rt-shell">
+        <div class="rt-section-heading rt-section-heading--wide">
+          <p class="rt-section-number">03 / Terrain Pipeline</p>
+          <h2 id="pipeline-title">From Unity terrain tools to a custom OpenGL renderer.</h2>
+          <p>
+            Unity was used as a terrain-authoring tool, not as the final runtime. The
+            authored data was exported and reconstructed inside our own engine.
+          </p>
+        </div>
+
+        <ol class="rt-pipeline" aria-label="Terrain rendering process">
+          <li>
+            <span class="rt-pipeline__number">01</span>
+            <div>
+              <h3>Sculpt the world</h3>
+              <p>
+                Shape the kingdom's large-scale mountains, valleys, coastlines, and
+                traversal spaces with Unity's terrain tools.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="rt-pipeline__number">02</span>
+            <div>
+              <h3>Author surface regions</h3>
+              <p>
+                Paint terrain layers and prepare splatmap channels that describe where
+                grass, rock, sand, and other materials should appear.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="rt-pipeline__number">03</span>
+            <div>
+              <h3>Export heightmaps and splatmaps</h3>
+              <p>
+                Convert the authored terrain into data the custom engine can load rather
+                than depending on Unity at runtime.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="rt-pipeline__number">04</span>
+            <div>
+              <h3>Generate terrain geometry</h3>
+              <p>
+                Use height values to construct the terrain mesh and support a matching
+                heightmap collider for player movement.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="rt-pipeline__number">05</span>
+            <div>
+              <h3>Blend materials in GLSL</h3>
+              <p>
+                Sample the exported splatmaps in the terrain shader and blend multiple
+                textures across a single continuous landscape.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="rt-pipeline__number">06</span>
+            <div>
+              <h3>Populate and iterate</h3>
+              <p>
+                Add instanced grass and environment assets, then revise density,
+                composition, and readability while testing the world in motion.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <figure class="rt-feature-image">
+          <img
+            src="images/realtime/realtimejump.png"
+            alt="CMYKingdom player character overlooking a grassy mountain environment"
+            loading="lazy"
+            width="1000"
+            height="517"
+          />
+          <figcaption>
+            The final terrain combines heightmap geometry, blended surface materials,
+            environment assets, and instanced grass.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         INSTANCED GRASS
+         ===================================================== -->
+    <section class="rt-section rt-section--split-media" aria-labelledby="grass-title">
+      <div class="rt-shell rt-media-layout">
+        <div class="rt-media-layout__copy">
+          <p class="rt-section-number">04 / Instanced Vegetation</p>
+          <h2 id="grass-title">Adding motion and density without multiplying draw calls.</h2>
+
+          <p class="rt-copy__lead">
+            Grass helped make the terrain feel alive, but a large landscape can contain
+            far more repeated geometry than is practical to render object by object.
+          </p>
+
+          <p>
+            The grass shader used instanced rendering to reuse the same vegetation
+            geometry across many placements. The result was a denser environment with
+            animated wind movement while preserving a rendering approach appropriate
+            for a real-time project.
+          </p>
+
+          <div class="rt-callout">
+            <span>Technical focus</span>
+            <strong>Repeated geometry, data-driven placement, shader animation, and real-time performance.</strong>
+          </div>
+        </div>
+
+        <figure class="rt-media-card">
+        <img
+          class="rt-media-card__gif"
+          src="images/realtime/wind.gif"
+          alt="CMYKingdom instanced grass moving in the wind"
+          loading="lazy"
+          decoding="async"
+          width="960"
+          height="494"
+        />
+        <figcaption>
+          Instanced grass animated across the rendered terrain.
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ENGINE CONTEXT
+         ===================================================== -->
+    <section class="rt-section rt-section--ink" aria-labelledby="engine-title">
+      <div class="rt-shell rt-two-column">
+        <div class="rt-section-heading">
+          <p class="rt-section-number">05 / Engine Context</p>
+          <h2 id="engine-title">My systems operated inside a broader team-built engine.</h2>
+        </div>
+
+        <div class="rt-copy">
+          <p class="rt-copy__lead">
+            The environment depended on many systems created collaboratively by the
+            full team. This context is important: terrain rendering was not an isolated
+            demo, but one part of a complete interactive graphics application.
+          </p>
+
+          <div class="rt-engine-grid">
+            <article>
+              <h3>Scene Architecture</h3>
+              <p>Component-based objects, transform hierarchies, cameras, and lights.</p>
+            </article>
+
+            <article>
+              <h3>Render Pipeline</h3>
+              <p>Modular render passes, deferred rendering, HDR, skybox rendering, and water refraction.</p>
+            </article>
+
+            <article>
+              <h3>Lighting</h3>
+              <p>Cascade shadow mapping with filtering techniques for soft shadows across a large world.</p>
+            </article>
+
+            <article>
+              <h3>Tools</h3>
+              <p>An in-game level editor for object selection, component editing, and scene saving and loading.</p>
+            </article>
+
+            <article>
+              <h3>Interaction</h3>
+              <p>Bullet Physics integration, terrain collisions, a player controller, power-ups, and UI.</p>
+            </article>
+
+            <article>
+              <h3>Character Systems</h3>
+              <p>Skeletal animation, animation blending, Assimp asset loading, and audio integration.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         VIDEO
+         ===================================================== -->
+    <section class="rt-section" id="demo" aria-labelledby="demo-title">
+      <div class="rt-shell">
+        <div class="rt-section-heading rt-section-heading--wide">
+          <p class="rt-section-number">06 / Project Demo</p>
+          <h2 id="demo-title">See the complete engine and game in motion.</h2>
+        </div>
+
+        <div class="rt-video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/f-BxPDLBmBU"
+            title="CMYKingdom project demonstration"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         GALLERY
+         ===================================================== -->
+    <section class="rt-section rt-section--gallery" aria-labelledby="gallery-title">
+      <div class="rt-shell">
+        <div class="rt-section-heading rt-section-heading--wide">
+          <p class="rt-section-number">07 / Development Gallery</p>
+          <h2 id="gallery-title">Rendering, tools, and the final player experience.</h2>
+        </div>
+
+        <div class="rt-gallery">
+          <figure class="rt-gallery__item rt-gallery__item--wide">
+            <img
+              src="images/realtime/forest.png"
+              alt="Final colorful forest environment in CMYKingdom"
+              loading="lazy"
+              width="1000"
+              height="515"
+            />
+            <figcaption>
+              Final forest view showing terrain, vegetation, props, player UI, and crystal objectives.
+            </figcaption>
+          </figure>
+
+          <figure class="rt-gallery__item">
+            <img
+              src="images/realtime/grayscale.png"
+              alt="CMYKingdom environment before color is restored"
+              loading="lazy"
+              width="1000"
+              height="625"
+            />
+            <figcaption>
+              The grayscale world state supports the game's color-restoration premise.
+            </figcaption>
+          </figure>
+
+          <figure class="rt-gallery__item">
+            <img
+              src="images/realtime/editor.png"
+              alt="CMYKingdom in-game level editor with selected object colliders and transform controls"
+              loading="lazy"
+              width="1000"
+              height="517"
+            />
+            <figcaption>
+              The team-built editor exposed transforms, components, colliders, and scene tools.
+            </figcaption>
+          </figure>
+
+          <figure class="rt-gallery__item rt-gallery__item--wide rt-gallery__item--dark">
+            <img
+              src="images/realtime/loading.png"
+              alt="CMYKingdom title screen with cyan, magenta, and yellow lettering"
+              loading="lazy"
+              width="1000"
+              height="625"
+            />
+            <figcaption>
+              Final title screen and the central cyan-magenta-yellow visual identity.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         REFLECTION
+         ===================================================== -->
+    <section class="rt-section" aria-labelledby="reflection-title">
+      <div class="rt-shell rt-two-column">
+        <div class="rt-section-heading">
+          <p class="rt-section-number">08 / Reflection</p>
+          <h2 id="reflection-title">Understanding what a game engine normally hides.</h2>
+        </div>
+
+        <div class="rt-copy">
+          <p class="rt-copy__lead">
+            CMYKingdom made the graphics pipeline tangible. Features that are normally
+            a checkbox or built-in component became explicit systems involving data,
+            buffers, shaders, transforms, draw calls, and tradeoffs.
+          </p>
+
+          <p>
+            The project also clarified why I am drawn to technical art. Designing an
+            environment was only half of the challenge; I also needed to build a reliable
+            way for the engine to interpret that design. The most rewarding work happened
+            where visual goals and technical constraints directly informed one another.
+          </p>
+
+          <blockquote class="rt-quote">
+            <p>
+              The goal was not only to render terrain. It was to preserve an artistic
+              direction while building the systems that made the world possible in real time.
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TEAM CREDIT
+         ===================================================== -->
+    <section class="rt-section rt-section--compact rt-section--ink" aria-labelledby="team-title">
+      <div class="rt-shell rt-team">
+        <div>
+          <p class="rt-section-number">09 / Team Credit</p>
+          <h2 id="team-title">Built collaboratively by five developers.</h2>
+        </div>
+
+        <div>
+          <p>
+            Brennan Andruss, Camila Yeremin, Hahns Pena, Joaquin Arredondo, and Lori Gavia.
+            The original team page contains the complete contribution breakdown for every member.
+          </p>
+          <a
+            class="rt-text-link"
+            href="https://brennanandruss.github.io/CMYKingdom/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the full team breakdown <span aria-hidden="true">&nearr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         NEXT PROJECT
+         Change the href and title to your preferred next project.
+         ===================================================== -->
+    <section class="rt-next-project" aria-label="Next project">
+      <a href="path-of-anu.html">
+        <span>Next project</span>
+        <strong>Path of Anu</strong>
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="rt-footer">
+    <div class="rt-shell rt-footer__inner">
+      <p>&copy; 2026 Joaquin Arredondo</p>
+      <a href="#main-content">Back to top &uarr;</a>
+    </div>
+  </footer>
+</body>
+</html>
