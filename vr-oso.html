@@ -5,24 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="VR Ocean Site One case study by Joaquin Arredondo: marine predator asset creation, animation, Unity integration, XR gameplay, and iterative development."
+      content="VR Ocean Site One case study by Joaquin Arredondo, focused on Maya modeling, rigging, animation, Unity predator AI, and interactive audio."
     />
     <title>VR Ocean Site One | Joaquin Arredondo</title>
 
-    <!-- Keep your existing global portfolio stylesheet first. -->
+    <!-- Keep the portfolio's global stylesheet first. -->
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- This file contains only the styles for this case-study page. -->
+    <!-- Project-specific styles load second. -->
     <link rel="stylesheet" href="vr-oso.css" />
   </head>
 
   <body class="home-page oso-page">
     <a class="oso-skip-link" href="#main-content">Skip to project content</a>
 
-    <!-- =========================================================
-         NAVIGATION
-         Matches the navigation used on the rest of the portfolio.
-         ========================================================= -->
     <header class="site-header oso-site-header">
       <nav class="home-nav" aria-label="Main navigation">
         <a class="brand" href="index.html" aria-label="Joaquin Arredondo home">
@@ -37,57 +32,53 @@
             </a>
           </li>
           <li><a href="index.html#experience">Experience</a></li>
-          <li><a href="resume.html">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="oso-main" id="main-content">
-      <!-- =========================================================
+      <!-- =====================================================
            HERO
-           ========================================================= -->
+           ===================================================== -->
       <section class="oso-hero" aria-labelledby="oso-title">
-        <div class="oso-ocean-glow" aria-hidden="true"></div>
-        <div class="oso-grid-lines" aria-hidden="true"></div>
-        <div class="oso-sonar oso-sonar-one" aria-hidden="true"></div>
-        <div class="oso-sonar oso-sonar-two" aria-hidden="true"></div>
-        <div class="oso-bubbles" aria-hidden="true"></div>
+        <div class="oso-grid" aria-hidden="true"></div>
+        <div class="oso-sonar oso-sonar--one" aria-hidden="true"></div>
+        <div class="oso-sonar oso-sonar--two" aria-hidden="true"></div>
 
-        <div class="oso-shell oso-hero-grid">
+        <div class="oso-shell oso-hero-layout">
           <div class="oso-hero-copy">
             <a class="oso-back-link" href="index.html#featured-projects">
               <span aria-hidden="true">←</span>
               All projects
             </a>
 
-            <p class="eyebrow">VR DEVELOPMENT · UNITY · MAYA · XR</p>
+            <p class="eyebrow">TECHNICAL ART · UNITY AI · VR DEVELOPMENT</p>
 
             <h1 id="oso-title">
               VR Ocean
               <span>Site One</span>
             </h1>
 
-            <p class="oso-hero-kicker">
-              Building believable marine predators for an educational VR
+            <p class="oso-hero-lead">
+              Bringing a shark and barracuda from Maya into a responsive VR
               ecosystem.
             </p>
 
             <p class="oso-hero-description">
-              A virtual-reality biodiversity experience set around a Santa
-              Barbara offshore site. My work connected 3D asset production,
-              character animation, predator behavior, Unity integration, and
-              iterative testing inside an existing interactive project.
+              My contribution centered on the complete predator pipeline:
+              modeling, texturing, rigging, weight painting, animation, Unity
+              integration, AI-driven behavior, and reusable audio systems for an
+              educational biodiversity experience.
             </p>
 
-            <div class="oso-hero-actions">
+            <div class="oso-actions">
               <a class="button button-primary" href="#pipeline">
-                Explore the pipeline
+                View the pipeline
                 <span aria-hidden="true">↓</span>
               </a>
-
-              <a class="button button-secondary" href="#gallery">
-                View placeholders
+              <a class="button button-secondary" href="#reel">
+                Watch breakdown
               </a>
             </div>
 
@@ -95,841 +86,404 @@
               <li>Unity</li>
               <li>C#</li>
               <li>XR Toolkit</li>
-              <li>Autodesk Maya</li>
+              <li>Maya</li>
               <li>IK</li>
               <li>Deformers</li>
-              <li>Unity Animator</li>
-              <li>Agile</li>
+              <li>Animator</li>
+              <li>Audio Mixer</li>
             </ul>
           </div>
 
-          <div class="oso-hero-visual">
-            <!-- IMAGE PLACEHOLDER 01
-                 Replace the entire .oso-placeholder element below with:
-
-                 <img
-                   class="oso-media-image oso-media-image--hero"
-                   src="images/oso/oso-hero.jpg"
-                   alt="VR Ocean Site One underwater environment with marine life"
-                 />
-
-                 Best choice: your strongest in-headset or Unity scene capture.
-                 Recommended ratio: portrait 4:5 or square 1:1.
-            -->
-            <div
-              class="oso-placeholder oso-placeholder--hero"
-              role="img"
-              aria-label="Placeholder for a VR Ocean Site One hero image"
-            >
-              <span class="oso-placeholder-number">IMAGE 01</span>
-              <div>
-                <strong>Replace with your strongest underwater screenshot</strong>
-                <p>
-                  Suggested: the offshore environment, a predator encounter, or
-                  a cinematic view that immediately reads as VR.
-                </p>
-                <code>images/oso/oso-hero.jpg</code>
-              </div>
-            </div>
-
-            <div class="oso-specimen-tag oso-specimen-tag--shark">
-              <span>Predator asset 01</span>
-              <strong>Shark</strong>
-            </div>
-
-            <div class="oso-specimen-tag oso-specimen-tag--barracuda">
-              <span>Predator asset 02</span>
-              <strong>Barracuda</strong>
-            </div>
-
-            <div class="oso-depth-card">
-              <span>Pipeline</span>
-              <strong>Maya → Unity</strong>
-            </div>
-          </div>
+          <!-- The image tag is already installed. Replace only the file. -->
+          <figure
+            class="oso-media oso-media--hero"
+            data-placeholder="ADD HERO IMAGE · images/oso/osovr1.png"
+          >
+            <img
+              src="images/oso/osovr1.png"
+              alt="VR Ocean Site One underwater environment with marine life"
+              fetchpriority="high"
+              decoding="async"
+              onerror="this.hidden=true"
+            />
+            <figcaption>
+              <span>VR biodiversity experience</span>
+              <strong>Maya assets brought to life in Unity</strong>
+            </figcaption>
+          </figure>
         </div>
 
-        <div class="oso-shell oso-project-facts" aria-label="Project facts">
+        <div class="oso-shell oso-facts" aria-label="Project facts">
           <article>
-            <span>My Role</span>
-            <strong>3D Artist<br />Animator<br />Unity Developer</strong>
+            <span>Role</span>
+            <strong>3D Artist · Animator · Unity Developer</strong>
           </article>
-
           <article>
             <span>Timeline</span>
-            <strong>September 2025<br />to January 2026</strong>
+            <strong>Sep 2025 — Jan 2026</strong>
           </article>
-
           <article>
-            <span>Experience</span>
-            <strong>VR biodiversity<br />mini-game</strong>
+            <span>Platform</span>
+            <strong>Unity XR · Meta Quest 3</strong>
           </article>
-
           <article>
-            <span>Core Focus</span>
-            <strong>Predator assets<br />animation and AI</strong>
+            <span>Focus</span>
+            <strong>Predators · AI · Interactive Audio</strong>
           </article>
         </div>
       </section>
 
-      <!-- =========================================================
-           PROJECT OVERVIEW
-           ========================================================= -->
-      <section
-        class="oso-section oso-section--overview"
-        aria-labelledby="overview-title"
-      >
+      <!-- =====================================================
+           OVERVIEW
+           ===================================================== -->
+      <section class="oso-section" aria-labelledby="overview-title">
         <div class="oso-shell">
-          <div class="oso-section-heading">
+          <div class="oso-section-head">
             <p class="section-number">01 / PROJECT OVERVIEW</p>
-            <h2 id="overview-title">
-              How do you make marine predators feel alive without losing
-              gameplay clarity?
-            </h2>
-          </div>
-
-          <div class="oso-overview-grid">
-            <div class="oso-overview-lead">
-              <p>
-                <strong>VR Ocean Site One</strong> is an immersive experience
-                designed to build biodiversity awareness through interaction
-                around a Santa Barbara offshore environment. The featured
-                mini-game asks the player to navigate the scene while engaging
-                with marine life and an egg-chasing objective.
-              </p>
-
-              <p>
-                I contributed two critical predator assets—a shark and a
-                barracuda—and carried them from Maya into Unity. My work included
-                modeling, rigging, weight painting, animation, integration,
-                animation-controller setup, AI-behavior support, testing, and
-                iteration with the broader team.
-              </p>
-            </div>
-
-            <div class="oso-stat-grid" aria-label="Project highlights">
-              <article>
-                <strong>2</strong>
-                <span>Predator assets</span>
-              </article>
-
-              <article>
-                <strong>VR</strong>
-                <span>Immersive learning</span>
-              </article>
-
-              <article>
-                <strong>XR</strong>
-                <span>Unity interaction</span>
-              </article>
-
-              <article>
-                <strong>Agile</strong>
-                <span>Client iteration</span>
-              </article>
-            </div>
-          </div>
-
-          <div class="oso-case-study-grid">
-            <article class="oso-case-card">
-              <span class="oso-case-index">01</span>
-              <p class="oso-card-label">THE CHALLENGE</p>
-              <h3>Introduce danger while preserving an approachable experience.</h3>
-              <p>
-                The predators needed silhouettes and movement that players could
-                quickly read in VR. Their behavior also had to support the
-                mini-game rather than overwhelm the educational goal.
-              </p>
-            </article>
-
-            <article class="oso-case-card">
-              <span class="oso-case-index">02</span>
-              <p class="oso-card-label">MY CONTRIBUTION</p>
-              <h3>Own the character pipeline from asset to in-engine behavior.</h3>
-              <p>
-                I built, rigged, weight-painted, animated, exported, and
-                integrated the shark and barracuda, then connected their motion
-                to Unity animation controllers and AI-driven behavior.
-              </p>
-            </article>
-
-            <article class="oso-case-card">
-              <span class="oso-case-index">03</span>
-              <p class="oso-card-label">THE APPROACH</p>
-              <h3>Iterate through headset testing and client-facing reviews.</h3>
-              <p>
-                The team worked in Agile sprints, reviewed deliverables with the
-                client, gathered playtest feedback, and refined interaction and
-                presentation inside an existing VR codebase.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =========================================================
-           EXPERIENCE / VIDEO PLACEHOLDER
-           ========================================================= -->
-      <section
-        class="oso-section oso-section--experience"
-        aria-labelledby="experience-title"
-      >
-        <div class="oso-shell">
-          <div class="oso-video-heading">
             <div>
-              <p class="section-number">02 / THE EXPERIENCE</p>
-              <h2 id="experience-title">Biodiversity learning through presence.</h2>
-            </div>
-
-            <p>
-              Use this section for a short gameplay reel showing the underwater
-              environment, the egg-chasing objective, predator encounters, and
-              the final in-engine animation quality.
-            </p>
-          </div>
-
-          <!-- VIDEO PLACEHOLDER
-               Replace .oso-video-placeholder with an iframe when your video is ready:
-
-               <div class="oso-video-frame">
-                 <iframe
-                   src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID"
-                   title="VR Ocean Site One gameplay showcase"
-                   loading="lazy"
-                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                   referrerpolicy="strict-origin-when-cross-origin"
-                   allowfullscreen
-                 ></iframe>
-               </div>
-          -->
-          <div
-            class="oso-video-placeholder"
-            role="img"
-            aria-label="Placeholder for a VR Ocean Site One gameplay video"
-          >
-            <span class="oso-video-play" aria-hidden="true">▶</span>
-            <div>
-              <p class="oso-card-label">GAMEPLAY VIDEO</p>
-              <h3>Replace with a 45–90 second project reel.</h3>
-              <p>
-                Lead with finished gameplay, then show Maya rigs, animation
-                states, and a quick before-and-after integration comparison.
+              <h2 id="overview-title">
+                A small project with one clear technical-art challenge:
+                <em>make the predators feel alive.</em>
+              </h2>
+              <p class="oso-section-summary">
+                VR Ocean Site One is an immersive biodiversity experience set
+                around an offshore Santa Barbara site. I worked inside an
+                existing Unity project to create two critical predator assets
+                for an egg-collecting mini-game and connect their visual motion
+                to gameplay behavior.
               </p>
-              <code>YouTube embed or local MP4</code>
             </div>
           </div>
 
-          <div class="oso-experience-notes">
+          <div class="oso-contribution-grid">
             <article>
               <span>01</span>
-              <strong>Explore</strong>
-              <p>Place the player inside a dynamic offshore marine ecosystem.</p>
+              <h3>Asset creation</h3>
+              <p>
+                Modeled and textured the shark and barracuda with readable
+                silhouettes suited to an underwater VR scene.
+              </p>
             </article>
-
             <article>
               <span>02</span>
-              <strong>Observe</strong>
-              <p>Use motion, scale, and proximity to make wildlife readable.</p>
+              <h3>Character animation</h3>
+              <p>
+                Built rigs, painted weights, and used IK systems and deformers
+                to create convincing swimming motion.
+              </p>
             </article>
-
             <article>
               <span>03</span>
-              <strong>React</strong>
-              <p>Connect predator behavior to a clear, responsive mini-game.</p>
+              <h3>Real-time behavior</h3>
+              <p>
+                Integrated the assets with Animator state machines, animation
+                events, and C# behavior scripts for responsive predator AI.
+              </p>
             </article>
-
             <article>
               <span>04</span>
-              <strong>Learn</strong>
-              <p>Support biodiversity awareness through interactive presence.</p>
+              <h3>Audio and handoff</h3>
+              <p>
+                Built reusable audio managers and a mixer, then documented the
+                Maya-to-Unity workflow for future contributors.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- =========================================================
+      <!-- =====================================================
            MAYA TO UNITY PIPELINE
-           ========================================================= -->
+           ===================================================== -->
       <section
         class="oso-section oso-section--pipeline"
         id="pipeline"
         aria-labelledby="pipeline-title"
       >
         <div class="oso-shell">
-          <div class="oso-section-heading oso-section-heading--split">
+          <div class="oso-section-head">
+            <p class="section-number">02 / MAYA → UNITY</p>
             <div>
-              <p class="section-number">03 / ASSET PIPELINE</p>
-              <h2 id="pipeline-title">From marine reference to responsive VR asset.</h2>
-            </div>
-
-            <p class="oso-heading-summary">
-              This was the most complete character-production pipeline I had
-              owned at the time. Each stage had to preserve visual quality while
-              remaining practical for animation, export, and real-time use.
-            </p>
-          </div>
-
-          <div class="oso-pipeline" aria-label="Maya to Unity asset pipeline">
-            <article>
-              <span>01</span>
-              <strong>Model</strong>
-              <p>Build readable predator silhouettes from marine reference.</p>
-            </article>
-
-            <div class="oso-pipeline-arrow" aria-hidden="true">→</div>
-
-            <article>
-              <span>02</span>
-              <strong>Rig</strong>
-              <p>Create joints, IK controls, deformers, and animation handles.</p>
-            </article>
-
-            <div class="oso-pipeline-arrow" aria-hidden="true">→</div>
-
-            <article>
-              <span>03</span>
-              <strong>Weight</strong>
-              <p>Refine deformation through weight painting and pose testing.</p>
-            </article>
-
-            <div class="oso-pipeline-arrow" aria-hidden="true">→</div>
-
-            <article>
-              <span>04</span>
-              <strong>Animate</strong>
-              <p>Create movement cycles and action states for predator behavior.</p>
-            </article>
-
-            <div class="oso-pipeline-arrow" aria-hidden="true">→</div>
-
-            <article>
-              <span>05</span>
-              <strong>Integrate</strong>
-              <p>Export to Unity and connect clips to gameplay and AI states.</p>
-            </article>
-          </div>
-
-          <div class="oso-asset-grid">
-            <article class="oso-asset-card">
-              <figure class="oso-asset-media">
-                <!-- IMAGE PLACEHOLDER 02
-                     Replace with a shark wireframe, rig, or Maya viewport image.
-                -->
-                <div
-                  class="oso-placeholder oso-placeholder--asset"
-                  role="img"
-                  aria-label="Placeholder for shark modeling and rigging process"
-                >
-                  <span class="oso-placeholder-number">IMAGE 02</span>
-                  <div>
-                    <strong>Shark asset breakdown</strong>
-                    <p>Suggested: wireframe, joint chain, IK controls, or pose sheet.</p>
-                    <code>images/oso/shark-rig.jpg</code>
-                  </div>
-                </div>
-              </figure>
-
-              <div class="oso-asset-copy">
-                <div class="oso-asset-topline">
-                  <span>PREDATOR 01</span>
-                  <span>MAYA → UNITY</span>
-                </div>
-                <h3>Shark</h3>
-                <p>
-                  Built for a strong silhouette and smooth body motion, with a
-                  rig that supported readable swimming and gameplay animation.
-                </p>
-                <ul>
-                  <li>Modeling and topology preparation</li>
-                  <li>Joint hierarchy, IK, and deformers</li>
-                  <li>Weight painting and deformation testing</li>
-                  <li>Animation clips prepared for Unity</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="oso-asset-card oso-asset-card--reverse">
-              <figure class="oso-asset-media">
-                <!-- IMAGE PLACEHOLDER 03
-                     Replace with a barracuda rig, animation frame, or Unity capture.
-                -->
-                <div
-                  class="oso-placeholder oso-placeholder--asset"
-                  role="img"
-                  aria-label="Placeholder for barracuda animation and Unity integration"
-                >
-                  <span class="oso-placeholder-number">IMAGE 03</span>
-                  <div>
-                    <strong>Barracuda animation breakdown</strong>
-                    <p>
-                      Suggested: controller rig, animation timeline, or finished
-                      in-game movement.
-                    </p>
-                    <code>images/oso/barracuda-animation.jpg</code>
-                  </div>
-                </div>
-              </figure>
-
-              <div class="oso-asset-copy">
-                <div class="oso-asset-topline">
-                  <span>PREDATOR 02</span>
-                  <span>ANIMATION · AI</span>
-                </div>
-                <h3>Barracuda</h3>
-                <p>
-                  Designed for a faster, sharper presence, using animation and
-                  timing to distinguish its behavior from the shark.
-                </p>
-                <ul>
-                  <li>Distinct movement language and pacing</li>
-                  <li>Rig controls for body and tail deformation</li>
-                  <li>Animator-ready clips and transitions</li>
-                  <li>Integration with AI-driven fish behavior</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =========================================================
-           ANIMATION AND AI INTEGRATION
-           ========================================================= -->
-      <section
-        class="oso-section oso-section--systems"
-        aria-labelledby="systems-title"
-      >
-        <div class="oso-shell">
-          <div class="oso-section-heading">
-            <p class="section-number">04 / ANIMATION & AI</p>
-            <h2 id="systems-title">
-              Animation became part of the gameplay system—not a layer added at
-              the end.
-            </h2>
-          </div>
-
-          <div class="oso-system-intro">
-            <p>
-              In Unity, the predator animations had to respond to gameplay state.
-              I connected animation controllers, transitions, and events to the
-              fish-behavior implementation so movement could communicate intent
-              and support the player experience.
-            </p>
-
-            <p>
-              The goal was not simply to make each fish swim. It was to create a
-              reliable handoff between AI logic and animation, with clips and
-              state changes that remained understandable to teammates working in
-              the larger project.
-            </p>
-          </div>
-
-          <div class="oso-behavior-map" aria-label="Predator behavior flow">
-            <article>
-              <span>01</span>
-              <strong>Sense</strong>
-              <p>Gameplay logic evaluates the player and current objective.</p>
-            </article>
-
-            <div aria-hidden="true">→</div>
-
-            <article>
-              <span>02</span>
-              <strong>Select</strong>
-              <p>The behavior system chooses an appropriate movement state.</p>
-            </article>
-
-            <div aria-hidden="true">→</div>
-
-            <article>
-              <span>03</span>
-              <strong>Animate</strong>
-              <p>The Animator transitions to the matching motion or action.</p>
-            </article>
-
-            <div aria-hidden="true">→</div>
-
-            <article>
-              <span>04</span>
-              <strong>Signal</strong>
-              <p>Animation timing and events keep gameplay feedback synchronized.</p>
-            </article>
-          </div>
-
-          <div class="oso-system-grid">
-            <article class="oso-system-card">
-              <span class="oso-system-icon" aria-hidden="true">≈</span>
-              <p class="oso-card-label">MOTION DESIGN</p>
-              <h3>Readable movement at VR scale.</h3>
-              <p>
-                Swimming cycles, turns, and action poses were evaluated from the
-                player’s perspective, not only inside the Maya viewport.
-              </p>
-            </article>
-
-            <article class="oso-system-card">
-              <span class="oso-system-icon" aria-hidden="true">◇</span>
-              <p class="oso-card-label">ANIMATOR LOGIC</p>
-              <h3>Transitions that support behavior.</h3>
-              <p>
-                Controller states and clip transitions helped the predator shift
-                between ambient movement and gameplay-relevant actions.
-              </p>
-            </article>
-
-            <article class="oso-system-card">
-              <span class="oso-system-icon" aria-hidden="true">⌁</span>
-              <p class="oso-card-label">EVENT TIMING</p>
-              <h3>Visual motion aligned with interaction.</h3>
-              <p>
-                Animation events provided synchronization points between the
-                visible action and the supporting gameplay response.
-              </p>
-            </article>
-
-            <article class="oso-system-card">
-              <span class="oso-system-icon" aria-hidden="true">↻</span>
-              <p class="oso-card-label">ITERATION</p>
-              <h3>Test the full loop in context.</h3>
-              <p>
-                Headset testing and review feedback exposed timing, readability,
-                and integration issues that were difficult to judge in isolation.
-              </p>
-            </article>
-          </div>
-
-          <figure class="oso-wide-media">
-            <!-- IMAGE PLACEHOLDER 04
-                 Replace with a Unity Animator screenshot, state-machine diagram,
-                 or a side-by-side Maya/Unity comparison.
-            -->
-            <div
-              class="oso-placeholder oso-placeholder--diagram"
-              role="img"
-              aria-label="Placeholder for Unity animation controller or AI integration diagram"
-            >
-              <span class="oso-placeholder-number">IMAGE 04</span>
-              <div>
-                <strong>Show the technical connection</strong>
-                <p>
-                  Suggested: Animator graph, AI state flow, animation events, or
-                  a labeled Maya-to-Unity comparison.
-                </p>
-                <code>images/oso/animator-system.jpg</code>
-              </div>
-            </div>
-          </figure>
-        </div>
-      </section>
-
-      <!-- =========================================================
-           COLLABORATION AND ITERATION
-           ========================================================= -->
-      <section
-        class="oso-section oso-section--collaboration"
-        aria-labelledby="collaboration-title"
-      >
-        <div class="oso-shell">
-          <div class="oso-section-heading oso-section-heading--split">
-            <div>
-              <p class="section-number">05 / COLLABORATION</p>
-              <h2 id="collaboration-title">Contributing inside an existing VR project.</h2>
-            </div>
-
-            <p class="oso-heading-summary">
-              The project required more than producing assets. I had to make my
-              work understandable, reviewable, and compatible with a larger code
-              and content pipeline.
-            </p>
-          </div>
-
-          <div class="oso-iteration-grid">
-            <article class="oso-iteration-card">
-              <div class="oso-iteration-heading">
-                <span>CONTEXT</span>
-                <h3>A shared, pre-existing project.</h3>
-              </div>
-              <div class="oso-iteration-response">
-                <span>RESPONSE</span>
-                <p>
-                  Learned the current structure before integrating new assets,
-                  then kept animation and behavior components modular enough for
-                  the team to continue refining them.
-                </p>
-              </div>
-            </article>
-
-            <article class="oso-iteration-card">
-              <div class="oso-iteration-heading">
-                <span>CONTEXT</span>
-                <h3>Regular sprint and client reviews.</h3>
-              </div>
-              <div class="oso-iteration-response">
-                <span>RESPONSE</span>
-                <p>
-                  Presented concrete deliverables, translated feedback into the
-                  next sprint, and prioritized changes that most improved the
-                  player-facing experience.
-                </p>
-              </div>
-            </article>
-
-            <article class="oso-iteration-card">
-              <div class="oso-iteration-heading">
-                <span>CONTEXT</span>
-                <h3>VR issues only visible in play.</h3>
-              </div>
-              <div class="oso-iteration-response">
-                <span>RESPONSE</span>
-                <p>
-                  Used playtesting to evaluate scale, movement, timing, and
-                  readability, then adjusted the implementation rather than
-                  judging the assets only from desktop tools.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="oso-collaboration-points">
-            <article>
-              <span>01</span>
-              <h3>Agile development</h3>
-              <p>Sprint-based deliverables made progress visible and reviewable.</p>
-            </article>
-
-            <article>
-              <span>02</span>
-              <h3>Client communication</h3>
-              <p>Reviews tied technical work back to experience goals.</p>
-            </article>
-
-            <article>
-              <span>03</span>
-              <h3>Playtest feedback</h3>
-              <p>Observation guided usability and gameplay-quality improvements.</p>
-            </article>
-
-            <article>
-              <span>04</span>
-              <h3>Pipeline thinking</h3>
-              <p>Documentation and clear handoff supported future contributors.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =========================================================
-           RESULTS AND REFLECTION
-           ========================================================= -->
-      <section
-        class="oso-section oso-section--results"
-        aria-labelledby="results-title"
-      >
-        <div class="oso-shell">
-          <div class="oso-results-grid">
-            <div>
-              <p class="section-number">06 / RESULTS & REFLECTION</p>
-              <h2 id="results-title">
-                A technical-art project shaped by the complete production loop.
+              <h2 id="pipeline-title">
+                The asset was not finished until it moved correctly in-engine.
               </h2>
-              <p class="oso-results-lead">
-                OSO strengthened my ability to move between art tools, engine
-                systems, gameplay needs, and team communication. The most useful
-                lesson was that an asset is not complete when it looks good—it is
-                complete when it behaves reliably inside the experience.
+              <p class="oso-section-summary">
+                I treated modeling, deformation, animation, export, and Unity
+                setup as one connected production problem rather than separate
+                deliverables.
               </p>
-            </div>
-
-            <div class="oso-result-list">
-              <article>
-                <span>01</span>
-                <p>
-                  Completed two animated predator assets and integrated them into
-                  a Unity XR experience.
-                </p>
-              </article>
-
-              <article>
-                <span>02</span>
-                <p>
-                  Connected visual motion to AI-driven behavior through Unity
-                  animation controllers and events.
-                </p>
-              </article>
-
-              <article>
-                <span>03</span>
-                <p>
-                  Practiced iterative development through sprint reviews,
-                  client feedback, and user testing.
-                </p>
-              </article>
-
-              <article>
-                <span>04</span>
-                <p>
-                  Built confidence working across modeling, animation, C#,
-                  interaction, and real-time implementation.
-                </p>
-              </article>
             </div>
           </div>
 
-          <div class="oso-reflection-grid">
-            <article class="oso-reflection-card">
-              <p class="oso-card-label">WHAT WORKED</p>
-              <h3>Owning the full asset path.</h3>
+          <div class="oso-pipeline-list" aria-label="Predator production pipeline">
+            <article>
+              <span>01</span>
+              <div>
+                <p>MODEL + TEXTURE</p>
+                <h3>Build readable marine silhouettes.</h3>
+              </div>
               <p>
-                Controlling the model, rig, animation, and integration made it
-                easier to diagnose problems without treating each stage as a
-                separate black box.
+                Created the shark and barracuda assets with forms that remained
+                recognizable at VR viewing distance and during fast movement.
               </p>
             </article>
+            <article>
+              <span>02</span>
+              <div>
+                <p>RIG + WEIGHT PAINT</p>
+                <h3>Prepare flexible bodies for swimming motion.</h3>
+              </div>
+              <p>
+                Constructed joint systems, painted deformation weights, and used
+                IK and deformers to support smooth body bends and tail motion.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <p>ANIMATE</p>
+                <h3>Create cycles that could support gameplay states.</h3>
+              </div>
+              <p>
+                Authored predator animation that could be reused and transitioned
+                through Unity rather than remaining a single presentation clip.
+              </p>
+            </article>
+            <article>
+              <span>04</span>
+              <div>
+                <p>EXPORT + INTEGRATE</p>
+                <h3>Preserve the work through the engine handoff.</h3>
+              </div>
+              <p>
+                Exported the assets, configured Unity import settings, connected
+                clips to Animator controllers, and documented the process.
+              </p>
+            </article>
+          </div>
 
-            <article class="oso-reflection-card">
-              <p class="oso-card-label">WHAT I LEARNED</p>
-              <h3>VR changes the standard for readability.</h3>
-              <p>
-                Scale, motion, timing, and player comfort must be judged from the
-                headset. A movement that reads on a monitor may feel unclear or
-                overwhelming when it surrounds the player.
-              </p>
-            </article>
+          <div class="oso-process-gallery">
+            <figure
+              class="oso-media oso-media--landscape"
+              data-placeholder="ADD MODELING IMAGE · images/oso/composited.png"
+            >
+              <img
+                src="images/oso/composited.png"
+                alt="Shark and barracuda modeling work in Autodesk Maya"
+                loading="lazy"
+                decoding="async"
+                onerror="this.hidden=true"
+              />
+              <figcaption>
+                <span>01 / FORM</span>
+                <strong>Modeling and texturing</strong>
+              </figcaption>
+            </figure>
 
-            <article class="oso-reflection-card">
-              <p class="oso-card-label">NEXT ITERATION</p>
-              <h3>Measure and tune behavior more deliberately.</h3>
-              <p>
-                A future pass would formalize animation-state documentation,
-                profile runtime performance, and compare player responses across
-                multiple predator timing and distance settings.
-              </p>
-            </article>
+            <figure
+              class="oso-media oso-media--portrait"
+              data-placeholder="ADD RIG IMAGE · images/oso/barricudaRig.png"
+            >
+              <img
+                src="images/oso/barricudaRig.png"
+                alt="Predator rigging and weight painting setup in Maya"
+                loading="lazy"
+                decoding="async"
+                onerror="this.hidden=true"
+              />
+              <figcaption>
+                <span>02 / DEFORMATION</span>
+                <strong>Rigging, IK, and weight painting</strong>
+              </figcaption>
+            </figure>
+
+            <figure
+              class="oso-media oso-media--portrait"
+              data-placeholder="ADD ANIMATION GIF · images/oso/animationgif.gif"
+            >
+              <img
+                src="images/oso/animationgif.gif"
+                alt="Animated predator swim cycle created in Maya"
+                loading="lazy"
+                decoding="async"
+                onerror="this.hidden=true"
+              />
+              <figcaption>
+                <span>03 / MOTION</span>
+                <strong>Swimming and attack animation</strong>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      <!-- =========================================================
-           GALLERY PLACEHOLDERS
-           ========================================================= -->
+      <!-- =====================================================
+           UNITY AI + AUDIO
+           ===================================================== -->
+      <section class="oso-section" aria-labelledby="systems-title">
+        <div class="oso-shell">
+          <div class="oso-section-head">
+            <p class="section-number">03 / UNITY SYSTEMS</p>
+            <div>
+              <h2 id="systems-title">
+                Animation, behavior, and sound worked as one response system.
+              </h2>
+              <p class="oso-section-summary">
+                The goal was not just to display animated fish. The predators
+                needed state-driven movement, clear reactions, and audio feedback
+                tied to gameplay and environmental events.
+              </p>
+            </div>
+          </div>
+
+          <div class="oso-systems-grid">
+            <article class="oso-system-card">
+              <p class="oso-label">PREDATOR AI</p>
+              <h3>From behavior state to visible motion.</h3>
+              <ul>
+                <li>Unity Animator controllers and state machines</li>
+                <li>Animation events for timing-dependent behavior</li>
+                <li>C# scripts connecting AI decisions to animation states</li>
+                <li>Responsive predator interactions inside the VR mini-game</li>
+              </ul>
+
+              <figure
+                class="oso-media oso-media--system"
+                data-placeholder="ADD UNITY AI IMAGE · images/oso/serializedoso.png"
+              >
+                <img
+                  src="images/oso/serializedoso.png"
+                  alt="Unity Animator state machine and predator AI setup"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.hidden=true"
+                />
+                <figcaption>
+                  <span>ENGINE VIEW</span>
+                  <strong>Animator, events, and C# behavior</strong>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="oso-system-card oso-system-card--audio">
+              <p class="oso-label">INTERACTIVE AUDIO</p>
+              <h3>A reusable mixer instead of one-off sound calls.</h3>
+              <ul>
+                <li>Audio managers for music and sound effects</li>
+                <li>Unity Audio Mixer routing and level control</li>
+                <li>Audio connected to gameplay and environmental events</li>
+                <li>A cleaner structure future teams could extend</li>
+              </ul>
+
+              <figure
+                class="oso-media oso-media--system"
+                data-placeholder="ADD MIXER IMAGE · images/oso/serializedMixer.png"
+              >
+                <img
+                  src="images/oso/serializedMixer.png"
+                  alt="Unity Audio Mixer and reusable audio manager setup"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.hidden=true"
+                />
+                <figcaption>
+                  <span>AUDIO VIEW</span>
+                  <strong>Music, SFX, and mixer routing</strong>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="oso-handoff-note">
+            <span>PRODUCTION NOTE</span>
+            <p>
+              I also debugged the Meta Quest 3 build, presented sprint
+              deliverables during client reviews, incorporated playtest feedback,
+              and wrote Maya-to-Unity pipeline documentation so the asset work
+              could be repeated rather than rediscovered.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           LOCAL VIDEO
+           ===================================================== -->
       <section
-        class="oso-section oso-section--gallery"
-        id="gallery"
-        aria-labelledby="gallery-title"
+        class="oso-section oso-section--reel"
+        id="reel"
+        aria-labelledby="reel-title"
       >
         <div class="oso-shell">
-          <div class="oso-section-heading oso-section-heading--split">
+          <div class="oso-section-head">
+            <p class="section-number">04 / PROJECT REEL</p>
             <div>
-              <p class="section-number">07 / PROJECT GALLERY</p>
-              <h2 id="gallery-title">Show the work behind the finished encounter.</h2>
-            </div>
-
-            <p class="oso-heading-summary">
-              Recruiters should see both final gameplay and evidence of your
-              process. Replace these cards with a balanced mix of polished
-              screenshots, wireframes, rigs, Animator graphs, and testing images.
-            </p>
-          </div>
-
-          <div class="oso-gallery-grid">
-            <!-- IMAGE PLACEHOLDER 05 -->
-            <div
-              class="oso-placeholder oso-placeholder--gallery oso-gallery-wide"
-              role="img"
-              aria-label="Placeholder for a wide VR Ocean Site One gameplay screenshot"
-            >
-              <span class="oso-placeholder-number">IMAGE 05</span>
-              <div>
-                <strong>Wide gameplay capture</strong>
-                <p>Use a strong underwater environment or predator encounter.</p>
-                <code>images/oso/oso-gameplay-wide.jpg</code>
-              </div>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER 06 -->
-            <div
-              class="oso-placeholder oso-placeholder--gallery"
-              role="img"
-              aria-label="Placeholder for a Maya wireframe image"
-            >
-              <span class="oso-placeholder-number">IMAGE 06</span>
-              <div>
-                <strong>Maya wireframe</strong>
-                <p>Show topology and silhouette decisions.</p>
-                <code>images/oso/maya-wireframe.jpg</code>
-              </div>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER 07 -->
-            <div
-              class="oso-placeholder oso-placeholder--gallery"
-              role="img"
-              aria-label="Placeholder for a rig controls image"
-            >
-              <span class="oso-placeholder-number">IMAGE 07</span>
-              <div>
-                <strong>Rig controls</strong>
-                <p>Show IK, joints, deformers, or a weight-paint view.</p>
-                <code>images/oso/rig-controls.jpg</code>
-              </div>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER 08 -->
-            <div
-              class="oso-placeholder oso-placeholder--gallery"
-              role="img"
-              aria-label="Placeholder for a Unity Animator screenshot"
-            >
-              <span class="oso-placeholder-number">IMAGE 08</span>
-              <div>
-                <strong>Unity Animator</strong>
-                <p>Show state transitions, parameters, or event timing.</p>
-                <code>images/oso/unity-animator.jpg</code>
-              </div>
-            </div>
-
-            <!-- IMAGE PLACEHOLDER 09 -->
-            <div
-              class="oso-placeholder oso-placeholder--gallery"
-              role="img"
-              aria-label="Placeholder for a playtesting image"
-            >
-              <span class="oso-placeholder-number">IMAGE 09</span>
-              <div>
-                <strong>Playtesting or review</strong>
-                <p>Document headset testing, sprint review, or team iteration.</p>
-                <code>images/oso/oso-playtest.jpg</code>
-              </div>
+              <h2 id="reel-title">Show the craft, then show it working.</h2>
+              <p class="oso-section-summary">
+                A useful breakdown reel can move from Maya wireframe and rig
+                controls to animation clips, Animator states, predator behavior,
+                and final headset gameplay.
+              </p>
             </div>
           </div>
+
+          <!--
+            Local MP4 version: works offline and on GitHub Pages.
+            Add:
+              videos/oso/oso-breakdown.mp4
+              images/oso/oso-video-poster.jpg
+          -->
+          <div class="oso-video-frame">
+          <iframe
+              src="https://drive.google.com/file/d/14-_b2CqqFiUf9tf7ZKGI4W8LVHY0o1-9/preview"
+              width="100%"
+              height="100%"
+              allow="autoplay"
+              loading="lazy">
+          </iframe>
+      </div>
         </div>
       </section>
 
-      <!-- =========================================================
-           NEXT PROJECT
-           ========================================================= -->
-      <section class="oso-next-project" aria-labelledby="next-project-title">
-        <div class="oso-shell oso-next-project-inner">
+      <!-- =====================================================
+           RESULT / NEXT PROJECT
+           ===================================================== -->
+      <section class="oso-section oso-section--result" aria-labelledby="result-title">
+        <div class="oso-shell oso-result-layout">
           <div>
-            <p class="section-number">NEXT PROJECT</p>
-            <h2 id="next-project-title">Path of Anu</h2>
-            <p>
-              Continue into a VR spellcasting case study focused on technical
-              art, procedural tools, VFX, world transformation, and puzzle design.
-            </p>
+            <p class="section-number">05 / RESULT</p>
+            <h2 id="result-title">A compact project that exercised the full asset loop.</h2>
           </div>
 
-          <a class="button button-primary" href="path-of-anu.html">
-            Explore Path of Anu
-            <span aria-hidden="true">→</span>
-          </a>
+          <div class="oso-result-copy">
+            <p>
+              OSO strengthened my ability to move between artistic decisions and
+              real-time implementation. The most important lesson was that a
+              character asset is only complete when its deformation, animation,
+              behavior, audio feedback, and engine handoff all survive contact
+              with the playable experience.
+            </p>
+
+            <div class="oso-result-tags" aria-label="Project outcomes">
+              <span>2 production-ready predator assets</span>
+              <span>Maya-to-Unity documentation</span>
+              <span>State-driven Unity behavior</span>
+              <span>Reusable audio architecture</span>
+            </div>
+          </div>
         </div>
       </section>
+
+      <a class="oso-next-project" href="seasick-scallywags.html">
+        <span>Next project · Game design and level systems</span>
+        <strong>Seasick Scallywags</strong>
+        <b aria-hidden="true">→</b>
+      </a>
     </main>
 
     <footer class="oso-footer">
       <p>© 2026 Joaquin Arredondo</p>
-      <a href="index.html#featured-projects">Back to selected work ↑</a>
+      <a href="index.html#featured-projects">Return to selected work</a>
     </footer>
   </body>
 </html>
