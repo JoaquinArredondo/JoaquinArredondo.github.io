@@ -1,521 +1,404 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Seasick Scallywags case study by Joaquin Arredondo, focused on level design, terrain, chunk management, enemy spawning, visual development, and playtesting."
-    />
-    <title>Seasick Scallywags | Joaquin Arredondo</title>
-
-    <!-- Keep the portfolio's global stylesheet first. -->
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Project-specific styles load second. -->
-    <link rel="stylesheet" href="seasick-scallywags.css" />
-  </head>
-
-  <body class="home-page scally-page">
-    <a class="scally-skip-link" href="#main-content">Skip to project content</a>
-
-    <header class="site-header scally-site-header">
-      <nav class="home-nav" aria-label="Main navigation">
-        <a class="brand" href="index.html" aria-label="Joaquin Arredondo home">
-          JA<span>.</span>
-        </a>
-
-        <ul class="home-nav-links">
-          <li>
-            <a class="scally-nav-current" href="index.html#featured-projects">
-              Portfolio
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Seasick Scallywags case study by Joaquin Arredondo, focused on level design, terrain, chunk management, enemy spawning, visual development, and playtesting." name="description"/>
+<title>Seasick Scallywags | Joaquin Arredondo</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="seasick-scallywags.css" rel="stylesheet"/>
+<link href="portfolio-core.css" rel="stylesheet"/></head>
+<body class="home-page scally-page">
+<a class="scally-skip-link" href="#main-content">Skip to project content</a>
+<header class="global-header">
+<nav aria-label="Main navigation" class="global-nav">
+<a aria-label="Joaquin Arredondo home" class="global-brand" href="index.html">JA<span>.</span></a>
+<ul class="global-nav-links">
+<li><a href="technical-art.html">Technical Art</a></li>
+<li><a href="gameplay-engineering.html">Gameplay Engineering</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a class="global-nav-cta" href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main class="scally-main" id="main-content">
+<section aria-labelledby="scally-title" class="scally-hero">
+<div aria-hidden="true" class="scally-grid"></div>
+<div aria-hidden="true" class="scally-horizon"></div>
+<div aria-hidden="true" class="scally-compass"></div>
+<div class="scally-shell scally-hero-layout">
+<div class="scally-hero-copy">
+<a class="scally-back-link" href="gameplay-engineering.html#seasick-gameplay">
+<span aria-hidden="true">←</span>
+              Gameplay Engineering projects
             </a>
-          </li>
-          <li><a href="index.html#experience">Experience</a></li>
-            <a href="resume.html" aria-current="page">Resume</a>
-
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="scally-main" id="main-content">
-      <!-- =====================================================
-           HERO
-           ===============images/seasick/seasickcomposite.png====================================== -->
-      <section class="scally-hero" aria-labelledby="scally-title">
-        <div class="scally-grid" aria-hidden="true"></div>
-        <div class="scally-horizon" aria-hidden="true"></div>
-        <div class="scally-compass" aria-hidden="true"></div>
-
-        <div class="scally-shell scally-hero-layout">
-          <div class="scally-hero-copy">
-            <a class="scally-back-link" href="index.html#featured-projects">
-              <span aria-hidden="true">←</span>
-              All projects
-            </a>
-
-            <p class="eyebrow">GAME DESIGN · LEVEL DESIGN · UNITY SYSTEMS</p>
-
-            <h1 id="scally-title">
+<p class="eyebrow">GAME DESIGN · LEVEL DESIGN · UNITY SYSTEMS</p>
+<h1 id="scally-title">
               Seasick
               <span>Scallywags</span>
-            </h1>
-
-            <p class="scally-hero-lead">
+</h1>
+<p class="scally-hero-lead">
               Designing two large nautical levels around readable routes,
               escalating encounters, and meaningful resource decisions.
             </p>
-
-            <p class="scally-hero-description">
+<p class="scally-hero-description">
               An eight-week Unity team project where I led visual and gameplay
               development for terrain, level flow, lighting, chunk management,
               enemy spawning, encounter pacing, and iterative playtesting.
             </p>
-
-            <div class="scally-actions">
-              <a class="button button-primary" href="#level-design">
+<div class="scally-actions">
+<a class="button button-primary" href="#level-design">
                 Explore level design
                 <span aria-hidden="true">↓</span>
-              </a>
-              <a
-                class="button button-secondary"
-                href="https://play.unity.com/en/games/dac7eeb0-2fd9-4a07-abba-62cc886f5634/seasick-scallywags"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+</a>
+<a class="button button-secondary" href="https://play.unity.com/en/games/dac7eeb0-2fd9-4a07-abba-62cc886f5634/seasick-scallywags" rel="noopener noreferrer" target="_blank">
                 Play the build
               </a>
-            </div>
-
-            <ul class="scally-tech-list" aria-label="Project technologies">
-              <li>Unity</li>
-              <li>C#</li>
-              <li>Terrain Toolkit</li>
-              <li>Git</li>
-              <li>Animator</li>
-              <li>VFX</li>
-              <li>SFX</li>
-              <li>Post-Processing</li>
-            </ul>
-          </div>
-
-          <figure
-            class="scally-media scally-media--hero"
-            data-placeholder="ADD HERO IMAGE · images/seasick/seasickcover.png"
-          >
-            <img
-              src="images/seasick/seasickcover.png"
-              alt="Captain Wigglefoot's ship sailing through the Seasick Scallywags ocean environment"
-              fetchpriority="high"
-              decoding="async"
-              onerror="this.hidden=true"
-            />
-            <figcaption>
-              <span>Naval dungeon crawler</span>
-              <strong>Two stages · Two bosses · Emergent encounters</strong>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="scally-shell scally-facts" aria-label="Project facts">
-          <article>
-            <span>Role</span>
-            <strong>Level Designer · Unity Developer · Visual Lead</strong>
-          </article>
-          <article>
-            <span>Timeline</span>
-            <strong>8-week Agile development</strong>
-          </article>
-          <article>
-            <span>Scope</span>
-            <strong>2 levels · 6 enemy archetypes · 2 bosses</strong>
-          </article>
-          <article>
-            <span>Focus</span>
-            <strong>Terrain · Spawning · Pacing · Playtesting</strong>
-          </article>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           OVERVIEW
-           ===================================================== -->
-      <section class="scally-section" aria-labelledby="overview-title">
-        <div class="scally-shell">
-          <div class="scally-section-head">
-            <p class="section-number">01 / PROJECT OVERVIEW</p>
-            <div>
-              <h2 id="overview-title">
+</div>
+<ul aria-label="Project technologies" class="scally-tech-list">
+<li>Unity</li>
+<li>C#</li>
+<li>Terrain Toolkit</li>
+<li>Git</li>
+<li>Animator</li>
+<li>VFX</li>
+<li>SFX</li>
+<li>Post-Processing</li>
+</ul>
+</div>
+<figure class="scally-media scally-media--hero">
+<img alt="Captain Wigglefoot's ship sailing through the Seasick Scallywags ocean environment" decoding="async" fetchpriority="high" loading="lazy" onerror="this.hidden=true" src="images/optimized/seasick/seasickcover.webp"/>
+<figcaption>
+<span>Naval dungeon crawler</span>
+<strong>Two stages · Two bosses · Emergent encounters</strong>
+</figcaption>
+</figure>
+</div>
+<div aria-label="Project facts" class="scally-shell scally-facts">
+<article>
+<span>Role</span>
+<strong>Level Designer · Unity Developer · Visual Lead</strong>
+</article>
+<article>
+<span>Timeline</span>
+<strong>8-week Agile development</strong>
+</article>
+<article>
+<span>Scope</span>
+<strong>2 levels · 6 enemy archetypes · 2 bosses</strong>
+</article>
+<article>
+<span>Focus</span>
+<strong>Terrain · Spawning · Pacing · Playtesting</strong>
+</article>
+</div>
+</section>
+<section aria-labelledby="overview-title" class="scally-section">
+<div class="scally-shell">
+<div class="scally-section-head">
+<p class="section-number">01 / PROJECT OVERVIEW</p>
+<div>
+<h2 id="overview-title">
                 A directed voyage with enough uncertainty to make every run feel
                 different.
               </h2>
-              <p class="scally-section-summary">
+<p class="scally-section-summary">
                 Players steer Captain Wigglefoot through the Drowned Sea, decide
                 which threats to dodge or destroy, collect gold and ammunition,
                 purchase upgrades, and defeat the Kraken and Captain Buggy. The
                 design combines linear progression with dynamically arranged
                 encounters and resource tradeoffs.
               </p>
-            </div>
-          </div>
-
-          <div class="scally-loop" aria-label="Core gameplay loop">
-            <article>
-              <span>01</span>
-              <strong>Sail</strong>
-              <p>Read the route, terrain, and approaching threats.</p>
-            </article>
-            <b aria-hidden="true">→</b>
-            <article>
-              <span>02</span>
-              <strong>Choose</strong>
-              <p>Dodge, fight, backtrack, or spend limited cannonballs.</p>
-            </article>
-            <b aria-hidden="true">→</b>
-            <article>
-              <span>03</span>
-              <strong>Collect</strong>
-              <p>Gain gold, ammo, health, and relic opportunities.</p>
-            </article>
-            <b aria-hidden="true">→</b>
-            <article>
-              <span>04</span>
-              <strong>Prepare</strong>
-              <p>Use shops and upgrades before the next escalation.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           LEVEL DESIGN
-           ===================================================== -->
-      <section
-        class="scally-section scally-section--levels"
-        id="level-design"
-        aria-labelledby="levels-title"
-      >
-        <div class="scally-shell">
-          <div class="scally-section-head">
-            <p class="section-number">02 / LEVEL DESIGN</p>
-            <div>
-              <h2 id="levels-title">
+</div>
+</div>
+<div aria-label="Core gameplay loop" class="scally-loop">
+<article>
+<span>01</span>
+<strong>Sail</strong>
+<p>Read the route, terrain, and approaching threats.</p>
+</article>
+<b aria-hidden="true">→</b>
+<article>
+<span>02</span>
+<strong>Choose</strong>
+<p>Dodge, fight, backtrack, or spend limited cannonballs.</p>
+</article>
+<b aria-hidden="true">→</b>
+<article>
+<span>03</span>
+<strong>Collect</strong>
+<p>Gain gold, ammo, health, and relic opportunities.</p>
+</article>
+<b aria-hidden="true">→</b>
+<article>
+<span>04</span>
+<strong>Prepare</strong>
+<p>Use shops and upgrades before the next escalation.</p>
+</article>
+</div>
+</div>
+</section>
+<section aria-labelledby="levels-title" class="scally-section scally-section--levels" id="level-design">
+<div class="scally-shell">
+<div class="scally-section-head">
+<p class="section-number">02 / LEVEL DESIGN</p>
+<div>
+<h2 id="levels-title">
                 Terrain, composition, and encounter spacing carried the player
                 forward.
               </h2>
-              <p class="scally-section-summary">
+<p class="scally-section-summary">
                 I led the visual development of both stages, shaping terrain,
                 navigation cues, environmental landmarks, lighting, baked
                 lighting, post-processing, and the placement logic that made a
                 large ocean route readable from the ship.
               </p>
-            </div>
-          </div>
-
-          <div class="scally-level-layout">
-            <figure
-              class="scally-media scally-media--level"
-              data-placeholder="ADD LEVEL IMAGE · images/seasick/Screenshot 2026-08-04 at 3.46.18 AM.png"
-            >
-              <img
-                src="images/seasick/Screenshot 2026-08-04 at 3.46.18 AM.png"
-                alt="Unity Scene view showing Seasick Scallywags terrain and route composition"
-                loading="lazy"
-                decoding="async"
-                onerror="this.hidden=true"
-              />
-              <figcaption>
-                <span>LEVEL VIEW</span>
-                <strong>Terrain, landmarks, route readability, and atmosphere</strong>
-              </figcaption>
-            </figure>
-
-            <div class="scally-level-notes">
-              <article>
-                <span>01</span>
-                <h3>Readable direction</h3>
-                <p>
+</div>
+</div>
+<div class="scally-level-layout">
+<figure class="scally-media scally-media--level">
+<img alt="Unity Scene view showing Seasick Scallywags terrain and route composition" decoding="async" loading="lazy" onerror="this.hidden=true" src="images/optimized/seasick/level-overview.webp"/>
+<figcaption>
+<span>LEVEL VIEW</span>
+<strong>Terrain, landmarks, route readability, and atmosphere</strong>
+</figcaption>
+</figure>
+<div class="scally-level-notes">
+<article>
+<span>01</span>
+<h3>Readable direction</h3>
+<p>
                   Mountain walls, docks, lighthouses, statues, towers, and open
                   water channels helped communicate where the player could move.
                 </p>
-              </article>
-              <article>
-                <span>02</span>
-                <h3>Distinct stage identity</h3>
-                <p>
+</article>
+<article>
+<span>02</span>
+<h3>Distinct stage identity</h3>
+<p>
                   The Kraken stage emphasized tentacles and supernatural danger;
                   the second stage shifted toward ships, docks, and the Trading
                   Company's controlled waters.
                 </p>
-              </article>
-              <article>
-                <span>03</span>
-                <h3>Atmosphere with purpose</h3>
-                <p>
+</article>
+<article>
+<span>03</span>
+<h3>Atmosphere with purpose</h3>
+<p>
                   Skyboxes, lighting, post-processing, and environmental
                   composition supported mood while keeping enemies and routes
                   readable during movement.
                 </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           WORLD SYSTEMS
-           ===================================================== -->
-      <section class="scally-section" aria-labelledby="systems-title">
-        <div class="scally-shell">
-          <div class="scally-section-head">
-            <p class="section-number">03 / WORLD SYSTEMS</p>
-            <div>
-              <h2 id="systems-title">
+</article>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="systems-title" class="scally-section">
+<div class="scally-shell">
+<div class="scally-section-head">
+<p class="section-number">03 / WORLD SYSTEMS</p>
+<div>
+<h2 id="systems-title">
                 The level only stayed large because the active simulation stayed
                 local.
               </h2>
-              <p class="scally-section-summary">
+<p class="scally-section-summary">
                 I designed distance-based chunk management and scalable spawning
                 so terrain, enemies, obstacles, and treasure could activate near
                 the player and clean up when no longer relevant.
               </p>
-            </div>
-          </div>
-
-          <div class="scally-systems-layout">
-            <div class="scally-system-copy">
-              <article>
-                <p class="scally-label">CHUNK MANAGEMENT</p>
-                <h3>Activate what the player can meaningfully encounter.</h3>
-                <p>
-                  Terrain sections and gameplay entities were managed around the
-                  player's position, reducing unnecessary rendering and behavior
-                  updates across the full world.
-                </p>
-              </article>
-
-              <article>
-                <p class="scally-label">ENCOUNTER PROGRESSION</p>
-                <h3>Escalate composition, not just raw health.</h3>
-                <p>
-                  Spawn logic increased enemy tiers, density, and combinations as
-                  the ship approached each boss, creating a visible difficulty
-                  curve through the level itself.
-                </p>
-              </article>
-
-              <article>
-                <p class="scally-label">ENEMY BEHAVIOR</p>
-                <h3>Six archetypes created different movement problems.</h3>
-                <p>
-                  Enemies used following, shooting, collision, damage zones,
-                  projectiles, VFX, SFX, and animation controllers to ask the
-                  player to maneuver or attack in different ways.
-                </p>
-              </article>
-            </div>
-
-            <figure
-              class="scally-media scally-media--system"
-              data-placeholder="ADD SYSTEM IMAGE · images/seasick/chunkserilized.png"
-            >
-              <img
-                src="images/seasick/chunkserilized.png"
-                alt="Unity chunk management and enemy spawning setup for Seasick Scallywags"
-                loading="lazy"
-                decoding="async"
-                onerror="this.hidden=true"
-              />
-              <figcaption>
-                <span>TECHNICAL VIEW</span>
-                <strong>Chunk activation, spawn regions, and encounter pacing</strong>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           ITERATION
-           ===================================================== -->
-      <section class="scally-section scally-section--iteration" aria-labelledby="iteration-title">
-        <div class="scally-shell">
-          <div class="scally-section-head">
-            <p class="section-number">04 / ITERATION</p>
-            <div>
-              <h2 id="iteration-title">
+</div>
+</div>
+<div class="scally-systems-layout scally-systems-layout--evidence">
+<div class="scally-system-copy">
+<article>
+<p class="scally-label">CHUNK MANAGEMENT</p>
+<h3>Activate what the player can meaningfully encounter.</h3>
+<p>Terrain sections and gameplay entities were managed around the player's position, reducing unnecessary rendering and behavior updates across the full world.</p>
+</article>
+<article>
+<p class="scally-label">ENCOUNTER PROGRESSION</p>
+<h3>Escalate composition, not just raw health.</h3>
+<p>Spawn logic increased enemy tiers, density, and combinations as the ship approached each boss, creating a visible difficulty curve through the level itself.</p>
+</article>
+<article>
+<p class="scally-label">ENEMY BEHAVIOR</p>
+<h3>Six archetypes created different movement problems.</h3>
+<p>Enemies used following, shooting, collision, damage zones, projectiles, VFX, SFX, and animation controllers to ask the player to maneuver or attack in different ways.</p>
+</article>
+</div>
+<div class="scally-evidence-board">
+<article class="scally-tech-card scally-tech-card--primary">
+<a aria-label="Enlarge: Chunk Obstacle Spawner Inspector" class="ja-lightbox-trigger scally-tech-card__media" data-lightbox="" data-lightbox-caption="ChunkObstacleSpawner attached to a terrain chunk, exposing obstacle prefabs and per-chunk spawn controls." href="images/technical-evidence/seasickscallywags-chunksobstaclespawner.png">
+<img alt="Unity Terrain Inspector showing Chunk Obstacle Spawner prefab references and per-chunk spawn settings" decoding="async" loading="lazy" src="images/technical-evidence/seasickscallywags-chunksobstaclespawner.png"/>
+</a>
+<div class="scally-tech-card__copy"><span>CHUNK-LOCAL SPAWNING</span><h3>Each terrain chunk owns its obstacle configuration.</h3><p>The spawner exposes prefab sets and spawn controls directly on the chunk, keeping encounter content modular instead of routing every obstacle through one scene-wide object.</p></div>
+</article>
+<div class="scally-tech-card-grid">
+<article class="scally-tech-card">
+<a aria-label="Enlarge: tentacle obstacle configuration Inspector" class="ja-lightbox-trigger scally-tech-card__media scally-tech-card__media--wide" data-lightbox="" data-lightbox-caption="Tentacle obstacle configuration with Animator, audio, and VFX references exposed in the Inspector." href="images/technical-evidence/seasickscallywags-obstacle-inspector.png">
+<img alt="Unity Inspector for a Seasick Scallywags tentacle obstacle with Animator, audio, and VFX references" decoding="async" loading="lazy" src="images/technical-evidence/seasickscallywags-obstacle-inspector.png"/>
+</a>
+<div class="scally-tech-card__copy"><span>SYSTEM CONFIGURATION</span><h3>Obstacle behavior is assembled from reusable references.</h3><p>Animator, sound, and VFX references are exposed together so the obstacle can be tuned in the scene without burying content assignments in code.</p></div>
+</article>
+<article class="scally-tech-card">
+<a aria-label="Enlarge: tentacle obstacle damage and follow configuration" class="ja-lightbox-trigger scally-tech-card__media scally-tech-card__media--wide" data-lightbox="" data-lightbox-caption="Tentacle obstacle Inspector showing damage and player-follow behavior configured together." href="images/technical-evidence/seasickscallywags-obstacle-follow.png">
+<img alt="Unity Inspector for a Seasick Scallywags tentacle obstacle with damage and player-follow configuration" decoding="async" loading="lazy" src="images/technical-evidence/seasickscallywags-obstacle-follow.png"/>
+</a>
+<div class="scally-tech-card__copy"><span>GAMEPLAY IMPLEMENTATION</span><h3>The visual obstacle is tied directly to player-relative behavior.</h3><p>The component view connects damage settings with follow logic, showing how the animated hazard participates in gameplay rather than existing as a decorative scene asset.</p></div>
+</article>
+</div>
+</div>
+</div>
+<div class="scally-engineering-note scally-engineering-note--compact">
+<span>WHAT TO NOTICE</span>
+<p>The screenshots are grouped as engineering evidence: chunk-local spawning controls world composition, while the tentacle captures show how an individual obstacle combines presentation references with runtime behavior.</p>
+</div>
+</section>
+<section aria-labelledby="iteration-title" class="scally-section scally-section--iteration">
+<div class="scally-shell">
+<div class="scally-section-head">
+<p class="section-number">04 / ITERATION</p>
+<div>
+<h2 id="iteration-title">
                 Playtesting changed the route, aiming, difficulty, and even the
                 project's scope.
               </h2>
-              <p class="scally-section-summary">
+<p class="scally-section-summary">
                 The team moved away from an over-ambitious open-world direction
                 toward a focused two-stage game. Testing then guided clearer
                 onboarding, better aiming, stronger feedback, and a more balanced
                 difficulty ramp.
               </p>
-            </div>
-          </div>
-
-          <div class="scally-iteration-layout">
-            <figure
-              class="scally-media scally-media--iteration"
-              data-placeholder="ADD ENCOUNTER IMAGE · images/seasick/seasickimage0.png"
-            >
-              <img
-                src="images/seasick/seasickimage0.png"
-                alt="Seasick Scallywags boss or enemy encounter after playtesting changes"
-                loading="lazy"
-                decoding="async"
-                onerror="this.hidden=true"
-              />
-              <figcaption>
-                <span>PLAYER-FACING VIEW</span>
-                <strong>Boss telegraphs, enemy density, and combat readability</strong>
-              </figcaption>
-            </figure>
-
-            <div class="scally-change-list">
-              <article>
-                <span>BEFORE</span>
-                <h3>The open world was too broad for the schedule.</h3>
-                <p>
+</div>
+</div>
+<div class="scally-iteration-layout">
+<figure class="scally-media scally-media--iteration">
+<img alt="Seasick Scallywags boss or enemy encounter after playtesting changes" decoding="async" loading="lazy" onerror="this.hidden=true" src="images/optimized/seasick/seasickimage0.webp"/>
+<figcaption>
+<span>PLAYER-FACING VIEW</span>
+<strong>Boss telegraphs, enemy density, and combat readability</strong>
+</figcaption>
+</figure>
+<div class="scally-change-list">
+<article>
+<span>BEFORE</span>
+<h3>The open world was too broad for the schedule.</h3>
+<p>
                   We narrowed the space into clearer routes and two finishable
                   stages, preserving emergent encounters without losing player
                   direction.
                 </p>
-              </article>
-              <article>
-                <span>FEEDBACK</span>
-                <h3>Early combat felt either trivial or overwhelmingly dense.</h3>
-                <p>
+</article>
+<article>
+<span>FEEDBACK</span>
+<h3>Early combat felt either trivial or overwhelmingly dense.</h3>
+<p>
                   We added moving enemies, adjusted spawn escalation, capped
                   first-stage tentacle density, and retuned the second-stage ship
                   composition.
                 </p>
-              </article>
-              <article>
-                <span>RESULT</span>
-                <h3>Players reported stronger gameplay, immersion, UI, and enjoyment.</h3>
-                <p>
+</article>
+<article>
+<span>RESULT</span>
+<h3>Players reported stronger gameplay, immersion, UI, and enjoyment.</h3>
+<p>
                   The final build paired clearer aiming and feedback with a more
                   deliberate difficulty curve from exploration to boss combat.
                 </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           DEVELOPMENT GALLERY + RESULT
-           ===================================================== -->
-      <section
-        class="scally-section scally-section--reel"
-        aria-labelledby="gallery-title"
-      >
-        <div class="scally-shell">
-          <div class="scally-section-head">
-            <p class="section-number">05 / DEVELOPMENT GALLERY</p>
-            <div>
-              <h2 id="gallery-title">
+</article>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="gallery-title" class="scally-section scally-section--reel">
+<div class="scally-shell">
+<div class="scally-section-head">
+<p class="section-number">05 / DEVELOPMENT GALLERY</p>
+<div>
+<h2 id="gallery-title">
                 A focused look at the world, encounters, and systems behind the final build.
               </h2>
-              <p class="scally-section-summary">
+<p class="scally-section-summary">
                 Because this was a smaller eight-week project, this page focuses on
                 the most useful production evidence: level composition, enemy and boss
                 encounters, technical scene management, and the changes made through
                 playtesting.
               </p>
-            </div>
-          </div>
-
-          <div class="scally-iteration-layout">
-            <figure
-              class="scally-media scally-media--iteration"
-              data-placeholder="ADD FINAL GAMEPLAY IMAGE · images/seasick/seasickcomposite.png"
-            >
-              <img
-                src="images/seasick/seasickcomposite.png"
-                alt="Final Seasick Scallywags gameplay showing the ship navigating a designed ocean encounter"
-                loading="lazy"
-                decoding="async"
-                onerror="this.hidden=true"
-              />
-              <figcaption>
-                <span>FINAL EXPERIENCE</span>
-                <strong>Navigation, combat, resource decisions, and encounter pacing</strong>
-              </figcaption>
-            </figure>
-
-            <div class="scally-change-list">
-              <article>
-                <span>LEVEL FLOW</span>
-                <h3>Each route was designed around readable decisions.</h3>
-                <p>
+</div>
+</div>
+<div class="scally-iteration-layout">
+<figure class="scally-media scally-media--iteration">
+<img alt="Final Seasick Scallywags gameplay showing the ship navigating a designed ocean encounter" decoding="async" loading="lazy" onerror="this.hidden=true" src="images/optimized/seasick/seasickcomposite.webp"/>
+<figcaption>
+<span>FINAL EXPERIENCE</span>
+<strong>Navigation, combat, resource decisions, and encounter pacing</strong>
+</figcaption>
+</figure>
+<div class="scally-change-list">
+<article>
+<span>LEVEL FLOW</span>
+<h3>Each route was designed around readable decisions.</h3>
+<p>
                   Open water, terrain walls, landmarks, shops, hazards, and enemy
                   placement worked together to help the player understand when to
                   advance, evade, backtrack, or prepare for a boss.
                 </p>
-              </article>
-
-              <article>
-                <span>TECHNICAL DESIGN</span>
-                <h3>Large spaces depended on controlled activation.</h3>
-                <p>
+</article>
+<article>
+<span>TECHNICAL DESIGN</span>
+<h3>Large spaces depended on controlled activation.</h3>
+<p>
                   Chunk management, enemy lifecycle rules, and scalable spawning
                   allowed the game to present a larger voyage without simulating or
                   rendering the full world at once.
                 </p>
-              </article>
-
-              <article>
-                <span>ITERATIVE DESIGN</span>
-                <h3>The final layout reflects what players actually did.</h3>
-                <p>
+</article>
+<article>
+<span>ITERATIVE DESIGN</span>
+<h3>The final layout reflects what players actually did.</h3>
+<p>
                   Playtesting informed navigation cues, aiming behavior, encounter
                   density, difficulty escalation, and the decision to replace an
                   over-scoped open world with two more focused stages.
                 </p>
-              </article>
-            </div>
-          </div>
-
-          <div class="scally-result">
-            <div>
-              <p class="section-number">06 / RESULT</p>
-              <h2>A complete build shaped through systems-level level design.</h2>
-            </div>
-            <div>
-              <p>
+</article>
+</div>
+</div>
+<div class="scally-result">
+<div>
+<p class="section-number">06 / RESULT</p>
+<h2>A complete build shaped through systems-level level design.</h2>
+</div>
+<div>
+<p>
                 Seasick Scallywags taught me that level design is not only terrain
                 placement. It is the relationship between visual guidance, technical
                 constraints, enemy behavior, resource flow, difficulty pacing, and
                 what players actually do when the game is placed in front of them.
               </p>
-              <a
-                class="scally-play-link"
-                href="https://play.unity.com/en/games/dac7eeb0-2fd9-4a07-abba-62cc886f5634/seasick-scallywags"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+<a class="scally-play-link" href="https://play.unity.com/en/games/dac7eeb0-2fd9-4a07-abba-62cc886f5634/seasick-scallywags" rel="noopener noreferrer" target="_blank">
                 Play Seasick Scallywags
                 <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <a class="scally-next-project" href="path-of-anu.html">
-        <span>Next project · VR spellcasting and technical art</span>
-        <strong>Path of Anu</strong>
-        <b aria-hidden="true">→</b>
-      </a>
-    </main>
-
-    <footer class="scally-footer">
-      <p>© 2026 Joaquin Arredondo</p>
-      <a href="index.html#featured-projects">Return to selected work</a>
-    </footer>
-  </body>
+</a>
+</div>
+</div>
+</div>
+</section>
+<a class="scally-next-project" href="path-of-anu.html">
+<span>Next project · VR spellcasting and technical art</span>
+<strong>Path of Anu</strong>
+<b aria-hidden="true">→</b>
+</a>
+</main>
+<footer class="scally-footer">
+<p>© 2026 Joaquin Arredondo</p>
+<a href="gameplay-engineering.html#seasick-gameplay">Return to selected work</a>
+</footer>
+<script defer="" src="portfolio.js"></script>
+</body>
 </html>

@@ -971,3 +971,29 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Technical screenshots preserve Unity editor readability. */
+.oso-media--technical img {
+  object-fit: contain;
+  background: #071018;
+}
+.oso-technical-evidence {
+  margin-top: 20px;
+}
+@media (max-width: 760px) {
+  .oso-technical-evidence { grid-template-columns: 1fr; }
+}
+.oso-media > .ja-lightbox-trigger {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
+.oso-media > .ja-lightbox-trigger img { z-index: 1; }
+.oso-media--audio-tech {
+  min-height: 220px;
+  aspect-ratio: 3 / 1;
+}
+@media (max-width: 760px) {
+  .oso-media--audio-tech { min-height: 180px; aspect-ratio: 3 / 1; }
+}

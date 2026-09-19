@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="SLOME / Romance in Video Games: Joaquin Arredondo's Cal Poly Unity research prototype exploring intent classification, PAD emotional state, Utility AI, relationship context, and personality-biased NPC response selection." name="description"/>
+<title>SLOME — Romance in Video Games | Game AI Research | Joaquin Arredondo</title>
+<link href="portfolio-core.css" rel="stylesheet"/>
+
+<style>
+/* SLOME gameplay demonstration — scoped to this page */
+.slome-gameplay-demo{position:relative;overflow:hidden}
+.slome-gameplay-demo::before{content:"";position:absolute;left:18%;top:8%;width:560px;height:360px;background:radial-gradient(circle,rgba(121,217,207,.07),transparent 70%);pointer-events:none}
+.slome-gameplay-feature{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(360px,.65fr);gap:44px;align-items:start;margin-top:36px}
+.slome-gameplay-feature__media{position:relative;min-width:0;overflow:hidden;border-radius:22px;border:1px solid rgba(255,255,255,.1);background:#080a0d;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.slome-gameplay-feature__media::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}
+.slome-gameplay-feature__media img{display:block;width:100%;height:auto;object-fit:contain;background:#050607}
+.slome-gameplay-feature__content{min-width:0;padding:18px 0 0}
+.slome-gameplay-feature__eyebrow{display:block;margin-bottom:12px;color:#79d9cf;font-size:.68rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.slome-gameplay-feature__content>h3{max-width:540px;margin:0 0 16px;font-size:clamp(1.8rem,2.45vw,2.65rem);line-height:1.03;letter-spacing:-.03em}
+.slome-gameplay-feature__content>p{max-width:560px;margin:0;color:var(--ja-muted);font-size:.98rem;line-height:1.68}
+.slome-gameplay-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:24px}
+.slome-gameplay-step{display:grid;grid-template-columns:38px minmax(0,1fr);gap:11px;align-items:start;padding:13px 14px;border:1px solid rgba(255,255,255,.075);border-radius:15px;background:rgba(255,255,255,.022)}
+.slome-gameplay-step>span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:rgba(121,217,207,.1);border:1px solid rgba(121,217,207,.24);color:#79d9cf;font-size:.64rem;font-weight:900;letter-spacing:.04em}
+.slome-gameplay-step strong{display:block;margin:0 0 3px;color:var(--ja-text);font-size:.86rem}
+.slome-gameplay-step p{margin:0;color:var(--ja-muted);font-size:.76rem;line-height:1.42}
+.slome-gameplay-feature__note{margin-top:20px!important;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);font-size:.74rem!important;line-height:1.5!important}
+
+.slome-gameplay-feature__visuals{min-width:0;display:grid;gap:16px;align-content:start}
+.slome-gameplay-cinematic{margin:0;overflow:hidden;border-radius:18px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);box-shadow:0 18px 42px rgba(0,0,0,.18)}
+.slome-gameplay-cinematic__media{position:relative;overflow:hidden;background:#080a0d}
+.slome-gameplay-cinematic__media::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}
+.slome-gameplay-cinematic img{display:block;width:100%;height:auto;aspect-ratio:16/7;object-fit:cover}
+.slome-gameplay-cinematic figcaption{padding:13px 15px 15px}
+.slome-gameplay-cinematic figcaption span{display:block;margin-bottom:5px;color:#79d9cf;font-size:.63rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.slome-gameplay-cinematic figcaption p{margin:0;color:var(--ja-muted);font-size:.76rem;line-height:1.48}
+@media(max-width:1180px){.slome-gameplay-feature{grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);gap:30px}.slome-gameplay-steps{grid-template-columns:1fr}}
+@media(max-width:900px){.slome-gameplay-feature{grid-template-columns:1fr;gap:22px}.slome-gameplay-feature__content{padding:0}.slome-gameplay-feature__content>h3,.slome-gameplay-feature__content>p{max-width:760px}.slome-gameplay-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.slome-gameplay-feature{margin-top:24px;gap:18px}.slome-gameplay-feature__media{border-radius:16px}.slome-gameplay-cinematic{border-radius:14px}.slome-gameplay-cinematic img{aspect-ratio:16/9}.slome-gameplay-feature__content>h3{font-size:1.55rem}.slome-gameplay-steps{grid-template-columns:1fr}.slome-gameplay-step{grid-template-columns:34px minmax(0,1fr);padding:11px}.slome-gameplay-step>span{width:29px;height:29px}}
+</style>
+</head>
+<body class="recruiter-page slome-page">
+<a class="ja-skip-link" href="#main-content">Skip to content</a>
+<header class="global-header">
+<nav aria-label="Main navigation" class="global-nav">
+<a aria-label="Joaquin Arredondo home" class="global-brand" href="index.html">JA<span>.</span></a>
+<ul class="global-nav-links">
+<li><a href="technical-art.html">Technical Art</a></li>
+<li><a aria-current="page" href="gameplay-engineering.html">Gameplay Engineering</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a class="global-nav-cta" href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main id="main-content">
+<section class="ja-hero slome-hero">
+<div class="ja-shell ja-hero-grid">
+<div class="ja-hero-copy" data-reveal="">
+<p class="ja-kicker">Cal Poly SURP · Game AI Research · Unity · C#</p>
+<h1>SLOME<span>Romance in Video Games</span></h1>
+<p class="ja-lede">A research prototype exploring a layered alternative to a single romance meter. Player actions are interpreted through intent, continuous emotional state, relationship context, Utility AI considerations, and personality bias before an NPC response is selected.</p>
+<div class="ja-actions">
+<a class="ja-button ja-button--primary" href="#architecture">Explore the System ↓</a>
+<a class="ja-button ja-button--ghost" href="#documentation">Read the Documentation ↓</a>
+<a class="ja-button ja-button--ghost" href="https://digitalcommons.calpoly.edu/ceng_surp/155/" rel="noopener noreferrer" target="_blank">Cal Poly Project ↗</a>
+</div>
+<ul aria-label="Project technologies and concepts" class="ja-skill-strip">
+<li>Unity</li><li>C#</li><li>Utility AI</li><li>PAD</li><li>ScriptableObjects</li><li>Response Curves</li><li>Intent Taxonomy</li><li>Relationship State</li>
+</ul>
+</div>
+<figure class="slome-hero-proof" data-reveal="">
+<a aria-label="Enlarge: SLOME Unity gameplay overview showing the player, NPCs, intent menu, and NPC state panel" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="SLOME prototype overview with the intent/action interface and NPC debug state visible in the running Unity scene." href="images/technical-evidence/slome-gameplay-overview.png">
+<img alt="SLOME Unity gameplay overview showing the player, NPCs, intent menu, and NPC state panel" decoding="async" fetchpriority="high" height="924" src="images/technical-evidence/slome-gameplay-overview.png" width="1646"/>
+</a>
+<figcaption><span>RUNNING PROTOTYPE</span><strong>Player-facing interaction with debug state exposed for research and tuning.</strong></figcaption>
+</figure>
+</div>
+</section>
+<section class="ja-section ja-section--tight">
+<div aria-label="Project facts" class="ja-shell ja-ownership">
+<article><span>My Focus</span><strong>Unity Systems · Utility AI · Research</strong></article>
+<article><span>Context</span><strong>Cal Poly SURP · 2025–2026</strong></article>
+<article><span>Core Model</span><strong>Intent → PAD → Utility</strong></article>
+<article><span>Authoring</span><strong>ScriptableObjects + Curves</strong></article>
+<article><span>Project State</span><strong>Research Prototype</strong></article>
+</div>
+</section>
+<section class="ja-section">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">The Design Problem</p>
+<h2>Model the interaction as changing state, not purchasing progress.</h2>
+<p>The research started from a critique of affinity meters and fixed romance thresholds. The prototype instead separates what the player did, how that action affects the NPC now, what the relationship means, and which response currently has the strongest utility.</p>
+</div>
+<div class="ja-card-grid" data-reveal="">
+<article class="ja-card"><span class="ja-micro-label">Immediate State</span><h3>PAD</h3><p>Pleasure, Arousal, and Dominance store continuous affect that can move incrementally after each interaction.</p></article>
+<article class="ja-card"><span class="ja-micro-label">Semantic Layer</span><h3>Intent</h3><p>Forty-six authored player actions map into nine reusable intent categories so the state model can be tuned without duplicating every rule.</p></article>
+<article class="ja-card"><span class="ja-micro-label">Decision Layer</span><h3>Utility AI</h3><p>Candidate responses score PAD, recent emotional change, intent context, authored curves, weights, and a bounded personality bias.</p></article>
+</div>
+</div>
+</section>
+<section class="ja-section ja-section--soft" id="architecture">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">System Architecture</p>
+<h2>Human-readable interaction enters a computational decision pipeline.</h2>
+<p>The implementation status is part of the story. The decision core works as a prototype; relationship wiring, personality data quality, and final response expression were not equally complete in the handoff snapshot.</p>
+</div>
+<div aria-label="Player action through NPC response selection" class="system-flow slome-system-flow">
+<article class="system-node"><small>01 · Input</small><strong>Player Action</strong><p>An authored action and intensity enter the interaction system.</p><span class="ja-status-tag ja-status-tag--implemented">Implemented</span></article>
+<article class="system-node"><small>02 · Meaning</small><strong>Intent Classification</strong><p>The action maps to Affection, Desire, Bonding, Trust, Respect, Playfulness, Security, Conflict, or Manipulation.</p><span class="ja-status-tag ja-status-tag--implemented">Implemented</span></article>
+<article class="system-node"><small>03 · Affect</small><strong>ΔPAD</strong><p>Intent supplies a signed emotional delta and action intensity scales the impulse.</p><span class="ja-status-tag ja-status-tag--implemented">Implemented</span></article>
+<article class="system-node"><small>04 · Relationship</small><strong>Intimacy · Passion · Commitment</strong><p>The relationship model exists in code, but the audited scenes did not have the relationship profile wired into runtime updates.</p><span class="ja-status-tag ja-status-tag--partial">Partial</span></article>
+<article class="system-node"><small>05 · State</small><strong>Current PAD</strong><p>The new affective state and last delta become inputs to response considerations.</p><span class="ja-status-tag ja-status-tag--implemented">Implemented</span></article>
+<article class="system-node"><small>06 · Evaluate</small><strong>Utility Considerations</strong><p>Response curves convert PAD, ΔPAD, and selected intent checks into normalized evidence.</p><span class="ja-status-tag ja-status-tag--implemented">Implemented</span></article>
+<article class="system-node"><small>07 · Character</small><strong>Personality Bias</strong><p>Personality is intended as a small post-score nudge; the handoff audit found stale/incomplete profile data that needed migration.</p><span class="ja-status-tag ja-status-tag--partial">Partial</span></article>
+<article class="system-node"><small>08 · Output</small><strong>Response Selection</strong><p>The highest-scoring semantic action is chosen. Full dialogue, gesture, memory, and production animation were future work.</p><span class="ja-status-tag ja-status-tag--stub">Prototype Output</span></article>
+</div>
+</div>
+</section>
+<section class="ja-section slome-experience-section">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">Player Experience → System Input</p>
+<h2>The interface makes authored intent explicit so the simulation has a readable entry point.</h2>
+<p>The prototype exposes research/debug information directly in the scene. These views are useful evidence because they show the interaction entering the same systems that are visible in the Unity Inspector.</p>
+</div>
+<div class="slome-experience-grid" data-reveal="">
+<article class="technical-evidence-card technical-evidence-card--wide">
+<div class="technical-evidence-card__media technical-evidence-card__media--gameplay">
+<a aria-label="Enlarge: SLOME gameplay close-up showing player and NPC interaction with a debug panel" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="Close gameplay view of the running SLOME prototype with NPC state and interaction UI visible." href="images/technical-evidence/slome-closeup-interaction.png">
+<img alt="SLOME gameplay close-up showing player and NPC interaction with a debug panel" decoding="async" height="920" loading="lazy" src="images/technical-evidence/slome-closeup-interaction.png" width="1322"/>
+</a>
+</div>
+<div class="technical-evidence-card__copy"><span>PLAYER-FACING PROTOTYPE</span><h3>Interaction and state are visible in the same frame.</h3><p>The scene combines the low-poly world, player/NPC interaction, and an on-screen state readout so emotional changes can be inspected while testing.</p></div>
+</article>
+<article class="technical-evidence-card">
+<div class="technical-evidence-card__media technical-evidence-card__media--contain technical-evidence-card__media--portraitish">
+<a aria-label="Enlarge: SLOME intent selection menu listing Affection, Desire, Bonding, Trust, Respect, and Playfulness" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="Intent-selection UI used to choose a semantic category before selecting a player action." href="images/technical-evidence/slome-closeup-uiofactions.png">
+<img alt="SLOME intent selection menu listing Affection, Desire, Bonding, Trust, Respect, and Playfulness" decoding="async" height="458" loading="lazy" src="images/technical-evidence/slome-closeup-uiofactions.png" width="488"/>
+</a>
+</div>
+<div class="technical-evidence-card__copy"><span>INTERACTION AUTHORING</span><h3>Nine intents create a compact semantic vocabulary.</h3><p>The UI exposes the same intent categories used by the simulation, keeping the player-action layer readable while the underlying system handles emotional deltas and scoring.</p></div>
+</article>
+</div>
+</div>
+</section>
+<section class="ja-section slome-gameplay-demo" id="gameplay-demo">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">Gameplay Demonstration</p>
+<h2>From player choice to an emotional interaction.</h2>
+<p>This running prototype shows the player-facing entry point into the research system. The player selects an intent, chooses a more specific social action, and sends that authored interaction into the NPC decision pipeline.</p>
+</div>
+<div class="slome-gameplay-feature" data-reveal="">
+<div class="slome-gameplay-feature__visuals">
+<div class="slome-gameplay-feature__media">
+<img src="images/technical-evidence/slome-gameplay.gif" alt="SLOME gameplay showing the player selecting the Affection intent and choosing social actions from the interaction menu." loading="lazy" decoding="async"/>
+</div>
+<figure class="slome-gameplay-cinematic">
+<div class="slome-gameplay-cinematic__media">
+<a aria-label="Enlarge: cinematic overview of the SLOME prototype environment" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="Cinematic overview of the SLOME research prototype environment." href="images/slome/slome-cinematic-horizontal.png">
+<img src="images/technical-evidence/slome-cinematic-horizontal.png" alt="Cinematic overview of the SLOME research prototype environment." loading="lazy" decoding="async"/>
+</a>
+</div>
+<figcaption><span>PROTOTYPE ENVIRONMENT</span><p>The social-simulation systems are tested inside a small 3D environment built to support player movement, NPC interaction, and readable state changes.</p></figcaption>
+</figure>
+</div>
+<div class="slome-gameplay-feature__content">
+<span class="slome-gameplay-feature__eyebrow">RUNNING UNITY PROTOTYPE</span>
+<h3>The interaction menu is the entry point into the simulation.</h3>
+<p>The menu turns a player-facing choice into structured data the emotional system can interpret. Broader intent categories provide semantic meaning, while individual actions retain their own authored identity and intensity.</p>
+<div class="slome-gameplay-steps">
+<div class="slome-gameplay-step"><span>01</span><div><strong>Select Intent</strong><p>A broader semantic category describes the kind of interaction the player is attempting.</p></div></div>
+<div class="slome-gameplay-step"><span>02</span><div><strong>Choose Action</strong><p>A specific authored action preserves its own intensity while mapping into that shared intent.</p></div></div>
+<div class="slome-gameplay-step"><span>03</span><div><strong>Update State</strong><p>The interaction is translated into emotional inputs used by the NPC's PAD and decision systems.</p></div></div>
+<div class="slome-gameplay-step"><span>04</span><div><strong>Select Response</strong><p>Utility considerations score the available semantic responses and choose the strongest current action.</p></div></div>
+</div>
+<p class="slome-gameplay-feature__note">The prototype demonstrates the decision layer of the architecture. Full dialogue, gestures, production animation, persistent memory, and complete response expression remained future work in the audited handoff snapshot.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="ja-section ja-section--soft">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">Action + Intent Authoring</p>
+<h2>Response behavior is data, not a hard-coded branching tree.</h2>
+<p>Emotional response assets collect their considerations, response curve, weight, optional animation trigger, cooldown, and personality bias in ScriptableObjects. That makes the decision layer inspectable in Unity instead of burying tuning inside one controller script.</p>
+</div>
+<div class="technical-evidence-grid technical-evidence-grid--2" data-reveal="">
+<article class="technical-evidence-card">
+<div class="technical-evidence-card__media technical-evidence-card__media--contain">
+<a aria-label="Enlarge: Unity Inspector for a SLOME Manipulation emotional action with PAD considerations, utility curve, weight, and personality bias" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="Manipulation response ScriptableObject showing three considerations, a utility curve, weight, and personality-bias authoring." href="images/technical-evidence/slome-action-breakdown.png">
+<img alt="Unity Inspector for a SLOME Manipulation emotional action with PAD considerations, utility curve, weight, and personality bias" decoding="async" height="1014" loading="lazy" src="images/technical-evidence/slome-action-breakdown.png" width="1632"/>
+</a>
+</div>
+<div class="technical-evidence-card__copy"><span>RESPONSE ASSET</span><h3>One response can combine several pieces of evidence.</h3><p>This action asset references low Pleasure, low Arousal, and high Dominance considerations, then exposes its curve and personality-bias settings for tuning.</p></div>
+</article>
+<article class="technical-evidence-card">
+<div class="technical-evidence-card__media technical-evidence-card__media--contain">
+<a aria-label="Enlarge: Unity Inspector for an Anchor emotional action with PAD and delta considerations plus personality bias" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="Anchor response asset showing shared-value considerations, utility curve, and personality bias." href="images/technical-evidence/slome-actionbreakdown.png">
+<img alt="Unity Inspector for an Anchor emotional action with PAD and delta considerations plus personality bias" decoding="async" height="870" loading="lazy" src="images/technical-evidence/slome-actionbreakdown.png" width="1632"/>
+</a>
+</div>
+<div class="technical-evidence-card__copy"><span>COMPOSABLE AUTHORING</span><h3>State and recent change can both affect the same decision.</h3><p>The Anchor asset combines current PAD state with a recent positive Pleasure delta, then applies a bounded personality preference after situational scoring.</p></div>
+</article>
+</div>
+</div>
+</section>
+<section class="ja-section">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">Emotional State</p>
+<h2>PAD is treated as continuous runtime state; labels remain a readable summary.</h2>
+<p>Pleasure, Arousal, and Dominance are normalized values. The system also stores the most recent delta so candidate actions can respond to both the current state and the direction of the latest change.</p>
+</div>
+<article class="technical-evidence-card technical-evidence-card--horizontal" data-reveal="">
+<div class="technical-evidence-card__media technical-evidence-card__media--contain">
+<a aria-label="Enlarge: SLOME Emotion Model Unity Inspector showing personality, PAD values, relationship triangle, and diagnostics" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="Emotion Model Inspector showing personality reference, PAD state, relationship triangle, and diagnostic fields. The captured Relationship Profile field is unassigned, matching the handoff audit's partial relationship-wiring status." href="images/technical-evidence/slome-emotionmodel.png">
+<img alt="SLOME Emotion Model Unity Inspector showing personality, PAD values, relationship triangle, and diagnostics" decoding="async" height="904" loading="lazy" src="images/technical-evidence/slome-emotionmodel.png" width="1626"/>
+</a>
+</div>
+<div class="technical-evidence-card__copy"><span>STATE MODEL</span><h3>The Inspector exposes both what works and what was incomplete.</h3><p>The captured component shows normalized PAD state, the relationship triangle, last delta, emotion label, and last intent. It also shows the <code>Relationship Profile</code> reference as unassigned—an important limitation identified in the handoff rather than something hidden by the portfolio.</p><div class="ja-eyebrow-row"><span class="ja-status-tag ja-status-tag--implemented">PAD Runtime State</span><span class="ja-status-tag ja-status-tag--partial">Relationship Wiring</span></div></div>
+</article>
+</div>
+</section>
+<section class="ja-section ja-section--soft">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">Utility AI Decision Layer</p>
+<h2>Small authoring components build up to a complete response score.</h2>
+<p>The decision layer is deliberately decomposed. Considerations define how state becomes evidence, the Emotion Brain owns the candidate set, and the NPC Controller chooses between ordinary and emotional decision paths.</p>
+</div>
+<div class="technical-evidence-grid technical-evidence-grid--3" data-reveal="">
+<article class="technical-evidence-card">
+<div class="technical-evidence-card__media technical-evidence-card__media--contain technical-evidence-card__media--compact">
+<a aria-label="Enlarge: Unity Inspector for a Pleasure Low PAD consideration with response curve" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="Pleasure Low consideration with an authored response curve and inversion setting." href="images/technical-evidence/slome-consideration.png">
+<img alt="Unity Inspector for a Pleasure Low PAD consideration with response curve" decoding="async" height="434" loading="lazy" src="images/technical-evidence/slome-consideration.png" width="1630"/>
+</a>
+</div>
+<div class="technical-evidence-card__copy"><span>CONSIDERATION</span><h3>Curves turn state into tunable desirability.</h3><p>A consideration can read one PAD axis and map it through an authored curve instead of relying on a binary rule.</p></div>
+</article>
+<article class="technical-evidence-card">
+<div class="technical-evidence-card__media technical-evidence-card__media--contain">
+<a aria-label="Enlarge: SLOME Emotion Brain Unity Inspector showing many emotional action assets" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="Emotion Brain Inspector containing a large authored list of emotional response actions." href="images/technical-evidence/slome-emotionbrain-actions.png">
+<img alt="SLOME Emotion Brain Unity Inspector showing many emotional action assets" decoding="async" height="1040" loading="lazy" src="images/technical-evidence/slome-emotionbrain-actions.png" width="1596"/>
+</a>
+</div>
+<div class="technical-evidence-card__copy"><span>CANDIDATE SET</span><h3>The brain evaluates authored response assets rather than one fixed branch.</h3><p>The handoff snapshot assigns 46 emotional actions to each demo NPC brain, allowing the scoring layer to rank a broad response vocabulary.</p></div>
+</article>
+<article class="technical-evidence-card">
+<div class="technical-evidence-card__media technical-evidence-card__media--contain technical-evidence-card__media--compact">
+<a aria-label="Enlarge: SLOME NPC Controller Unity Inspector with movement and emotional AI settings" class="ja-lightbox-trigger" data-lightbox="" data-lightbox-caption="NPC Controller Inspector showing movement and emotional-AI timing fields." href="images/technical-evidence/slome-npccontroller.png">
+<img alt="SLOME NPC Controller Unity Inspector with movement and emotional AI settings" decoding="async" height="458" loading="lazy" src="images/technical-evidence/slome-npccontroller.png" width="1630"/>
+</a>
+</div>
+<div class="technical-evidence-card__copy"><span>NPC CONTROLLER</span><h3>Emotional decisions sit inside a broader NPC state machine.</h3><p>The controller coordinates movement and emotional-trigger timing so the research system can coexist with the prototype's ordinary needs-based behavior.</p></div>
+</article>
+</div>
+</div>
+</section>
+<section class="ja-section">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">Preliminary Validation</p>
+<h2>The paper tests the architecture with the same interaction sequence across two configured NPC profiles.</h2>
+<p>The research paper reports a controlled A/B simulation beginning from identical PAD state and applying the same three player actions—<strong>TeaseHarsh → Apology → Promise</strong>. The two configured profiles produced different PAD trajectories and, in some steps, different selected responses.</p>
+</div>
+<div aria-label="Preliminary A/B simulation sequence" class="ja-pipeline-strip" data-reveal="">
+<article class="ja-pipeline-step"><small>01 · Conflict</small><strong>TeaseHarsh</strong><p>Both agents move toward a negative, high-arousal state.</p></article>
+<article class="ja-pipeline-step"><small>02 · Repair</small><strong>Apology</strong><p>Recovery differs between the two configured profiles.</p></article>
+<article class="ja-pipeline-step"><small>03 · Security</small><strong>Promise</strong><p>Both continue recovering while retaining different PAD values.</p></article>
+<article class="ja-pipeline-step"><small>Interpretation</small><strong>Divergence</strong><p>The paper uses the run as preliminary system-level evidence that weighting can change trajectories and selection.</p></article>
+</div>
+<div class="ja-callout" data-reveal="" style="margin-top:22px"><strong>Important limitation</strong><p>This was a system-level simulation, not a player study of emotional realism. The later technical handoff also audits the Unity snapshot and identifies personality-asset/schema problems that should be fixed before stronger behavioral claims are made.</p></div>
+</div>
+</section>
+<section class="ja-section">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">Implementation Truth</p>
+<h2>The most useful result is a working decision foundation—and a precise map of what still needed work.</h2>
+</div>
+<div class="implementation-truth" data-reveal="">
+<article class="truth-card"><span class="ja-status-tag ja-status-tag--implemented">Implemented</span><h3>Decision Core</h3><p>Player-action taxonomy, action-to-intent mapping, per-action intensity, PAD state and deltas, utility considerations, response curves, emotional action scoring, and personality-bias code are present in the prototype.</p></article>
+<article class="truth-card"><span class="ja-status-tag ja-status-tag--partial">Partial / Prototype</span><h3>Relationship + Personality</h3><p>The relationship model exists in code but was not wired into the inspected scenes. Personality bias code exists, while much of the serialized profile content required cleanup and migration.</p></article>
+<article class="truth-card"><span class="ja-status-tag ja-status-tag--stub">Not Fully Implemented</span><h3>Expression + Persistence</h3><p>Selected responses mostly resolve to logging/cooldown scaffolding. Production dialogue, embodied response animation, memory, consent/boundary appraisal, and durable relationship persistence remained future work.</p></article>
+</div>
+<div class="ja-callout" data-reveal="" style="margin-top:22px"><strong>Research framing</strong><p>PAD, Sternberg-style relationship dimensions, and NERIS/MBTI-inspired personality parameters are used as computational and authoring abstractions. The project does not claim to reproduce human emotion, diagnose personality, or prove perceived romantic realism.</p></div>
+</div>
+</section>
+<section class="ja-section ja-section--soft" id="documentation">
+<div class="ja-shell">
+<div class="ja-heading ja-heading--wide" data-reveal="">
+<p class="ja-kicker">Research + Technical Documentation</p>
+<h2>Two documents tell two different parts of the project.</h2>
+<p>The research paper explains the academic motivation, architecture, and preliminary system-level validation. The technical/design handoff audits the Unity snapshot, separates implementation truth from intended design, and gives the next project group a concrete roadmap.</p>
+</div>
+<div class="ja-document-grid" data-reveal="">
+<article class="ja-document-viewer">
+<div class="ja-document-viewer__header"><div><span>RESEARCH PAPER</span><h3>Toward Dynamic Romance Systems</h3></div><div class="ja-document-viewer__actions"><a href="documents/romance-research-paper.pdf" rel="noopener noreferrer" target="_blank">Open ↗</a><a download="" href="documents/romance-research-paper.pdf">Download</a></div></div>
+<p>The paper presents the PAD + Utility AI architecture and a preliminary A/B simulation under different personality configurations. It explicitly frames the work as architectural/system-level validation rather than a user study of perceived realism.</p>
+<iframe class="ja-document-viewer__frame" src="documents/romance-research-paper.pdf#view=FitH" title="Romance in Video Games research paper"></iframe>
+<div class="ja-document-viewer__mobile-fallback"><a class="ja-button ja-button--ghost" href="documents/romance-research-paper.pdf" rel="noopener noreferrer" target="_blank">Open Research Paper ↗</a></div>
+</article>
+<article class="ja-document-viewer">
+<div class="ja-document-viewer__header"><div><span>TECHNICAL / DESIGN HANDOFF</span><h3>SLOME Technical &amp; Design Handoff</h3></div><div class="ja-document-viewer__actions"><a href="documents/romance-technical-handoff.pdf" rel="noopener noreferrer" target="_blank">Open ↗</a><a download="" href="documents/romance-technical-handoff.pdf">Download</a></div></div>
+<p>The handoff maps architecture, code paths, asset state, implementation status, known defects, design debt, risks, and a prioritized roadmap. It is intentionally candid about incomplete scene wiring and future systems.</p>
+<iframe class="ja-document-viewer__frame" src="documents/romance-technical-handoff.pdf#view=FitH" title="SLOME technical and design handoff"></iframe>
+<div class="ja-document-viewer__mobile-fallback"><a class="ja-button ja-button--ghost" href="documents/romance-technical-handoff.pdf" rel="noopener noreferrer" target="_blank">Open Technical Handoff ↗</a></div>
+</article>
+</div>
+</div>
+</section>
+<section class="ja-section ja-section--tight">
+<div class="ja-shell ja-related">
+<a href="gameplay-engineering.html"><small>Continue</small><strong>Gameplay Engineering →</strong></a>
+<a href="path-of-anu.html"><small>Related Systems Work</small><strong>Path of Anu →</strong></a>
+</div>
+</section>
+</main>
+<footer class="global-footer"><div class="global-footer-inner"><p>© 2026 Joaquin Arredondo</p><p>Game AI · Utility AI · Emotion Modeling · Interactive Systems</p></div></footer>
+<script defer="" src="portfolio.js"></script>
+</body>
+</html>
